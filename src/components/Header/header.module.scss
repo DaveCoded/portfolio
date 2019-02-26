@@ -2,4 +2,9 @@
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 1.4rem;
+
+  &:hover {
+    cursor: pointer;
+    color: goldenrod;
+  }
 }
