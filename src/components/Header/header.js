@@ -1,10 +1,10 @@
 import React from "react"
 
-import classes from "./header.module.css"
+import styles from "./header.module.css"
 
 const Header = props => (
   <div>
-    <h1 className={classes.heading}>{props.children}</h1>
+    <h1 className={styles.heading}>{props.children}</h1>
   </div>
 )
 
