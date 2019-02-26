@@ -1,10 +1,12 @@
 import React from "react"
-import styles from "./homebutton.module.scss"
+import house from "../../assets/home-blue.svg"
 
 const HomeButton = () => (
-  <div>
-    <button className={styles.homeButton}>Home</button>
-  </div>
+  <img
+    src={house}
+    style={{ width: "60px", display: "inline-block" }}
+    alt="Home link"
+  />
 )
 
 export default HomeButton
