@@ -2,8 +2,7 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient(to right, #e6e602, #e6bf02 40%, #e39700);
-  position: relative;
-  top: -12rem;
+  margin-top: -10.3rem;
   left: 0;
   z-index: -500;
 }
@@ -14,8 +13,35 @@
   height: 100%;
   position: absolute;
   background-repeat: no-repeat;
-  background-size: 55%;
-  top: -48px;
+  background-size: 49%;
   left: 0px;
   z-index: 1;
+}
+
+.socialdiv {
+  width: 7.2rem;
+  height: 20.5rem;
+  margin-top: 0.5rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.heading {
+  font-size: 6.5rem;
+  color: #ffffff;
+  font-weight: 400;
+  margin-top: 34vh;
+  text-align: center;
+}
+hr {
+  width: 35%;
+  text-align: center;
+  margin: 2.5rem auto;
+  border: 1px solid white;
 }

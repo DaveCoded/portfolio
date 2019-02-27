@@ -12,14 +12,35 @@ import coderlist from "../assets/coderlist-button.svg"
 const HomePage = () => (
   <Layout>
     <section className={styles.background}>
-      <div className={styles.polygon} />
-      <SocialBar>
-        <SocialButton href="#" src={github} alt="Github logo" />
-        <SocialButton href="#" src={linkedin} alt="LinkedIn logo" />
-        <SocialButton href="#" src={twitter} alt="Twitter logo" />
-        <SocialButton href="#" src={coderlist} alt="CoderList logo" />
-      </SocialBar>
-      <h1>Hi. My name is Dave.</h1>
+      <div className={styles.polygon}>
+        <h1 className={styles.heading}>
+          Hi. My name is Dave. <br /> Welcome to my portfolio.
+        </h1>
+        <hr />
+      </div>
+      <SocialBar />
+      <div className={styles.socialdiv}>
+        <SocialButton
+          href="https://github.com/DaveCoded"
+          src={github}
+          alt="Github logo"
+        />
+        <SocialButton
+          href="https://www.linkedin.com/in/dave-bernhard-93b0b876/"
+          src={linkedin}
+          alt="LinkedIn logo"
+        />
+        <SocialButton
+          href="https://twitter.com/earthwormdave"
+          src={twitter}
+          alt="Twitter logo"
+        />
+        <SocialButton
+          href="https://www.coderlist.io/profile/coderlist423"
+          src={coderlist}
+          alt="CoderList logo"
+        />
+      </div>
     </section>
   </Layout>
 )
