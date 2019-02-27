@@ -5,6 +5,19 @@
   src: url("../fonts/NeutraTextTF-Book.otf");
 }
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 body {
+  box-sizing: border-box;
   font-family: "Neutra Text";
+}
+
+a {
+  text-decoration: none;
 }

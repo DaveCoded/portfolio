@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import styles from "./layout.module.scss"
 
 import HomeButton from "../components/HomeButton/homebutton"
 
@@ -10,7 +11,7 @@ const ListLink = props => (
 )
 
 export default ({ children }) => (
-  <div>
+  <div className={styles.layout}>
     <nav>
       <Link to="/">
         <HomeButton />
