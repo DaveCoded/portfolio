@@ -4,5 +4,17 @@
   background: linear-gradient(to right, #e6e602, #e6bf02 40%, #e39700);
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -500;
+}
+
+.polygon {
+  background: url("../assets/pink-polygon.svg");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 49%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
