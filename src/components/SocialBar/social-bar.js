@@ -1,6 +1,8 @@
 import React from "react"
 import styles from "./social-bar.module.scss"
 
-const SocialBar = () => <div className={styles.socialBar} />
+const SocialBar = props => (
+  <div className={styles.socialBar}>{props.children}</div>
+)
 
 export default SocialBar

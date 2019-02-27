@@ -4,7 +4,7 @@ import house from "../../assets/home-blue.svg"
 const HomeButton = () => (
   <img
     src={house}
-    style={{ width: "60px", display: "inline-block" }}
+    style={{ width: "5.2rem", display: "inline-block" }}
     alt="Home link"
   />
 )
