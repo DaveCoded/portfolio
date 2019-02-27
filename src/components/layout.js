@@ -2,13 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import styles from "./layout.module.scss"
 
+import ListLink from "./ListLink/ListLink"
 import HomeButton from "../components/HomeButton/homebutton"
-
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
 
 export default ({ children }) => (
   <div className={styles.layout}>
@@ -16,7 +11,7 @@ export default ({ children }) => (
       <Link to="/">
         <HomeButton />
       </Link>
-      <ul style={{ listStyle: `none`, float: `right` }}>
+      <ul>
         <ListLink to="/about/">about</ListLink>
         <ListLink to="/projects/">projects</ListLink>
         <ListLink to="/blog/">blog</ListLink>

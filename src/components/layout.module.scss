@@ -1,6 +1,19 @@
-.layout nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.layout {
+  background-color: darkcyan;
+  height: 100vh;
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  ul {
+    list-style: none;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin-right: 4rem;
+    font-size: 1.5rem;
+  }
 }
