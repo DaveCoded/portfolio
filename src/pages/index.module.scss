@@ -2,7 +2,8 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient(to right, #e6e602, #e6bf02 40%, #e39700);
-  top: 0;
+  position: relative;
+  top: -12rem;
   left: 0;
   z-index: -500;
 }
