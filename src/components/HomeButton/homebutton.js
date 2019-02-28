@@ -1,5 +1,5 @@
 import React from "react"
-import house from "../../assets/home-blue.svg"
+import house from "../../assets/svg/home-blue.svg"
 
 const HomeButton = () => (
   <img
