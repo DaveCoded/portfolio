@@ -19,7 +19,7 @@ const HomePage = ({ data }) => {
 
   return (
     <Layout>
-      <section className={styles.background}>
+      <section className={styles.topBackground}>
         <div className={styles.polygon}>
           <h1 className={styles.heading}>
             Hi. My name is Dave. <br /> Welcome to my portfolio.
@@ -33,7 +33,27 @@ const HomePage = ({ data }) => {
           <SocialButton href={twitterURL} src={twitter} alt="Twitter" />
           <SocialButton href={coderlistURL} src={coderlist} alt="CoderList" />
         </div>
-        <Img fluid={data.eenyLogo.childImageSharp.fluid} />
+        <div className={styles.description}>
+          <p>
+            I am a front end developer with a <br /> passion for JavaScript, CSS
+            and creating <br /> beautiful experiences that are accessible to all
+          </p>
+        </div>
+      </section>
+      <section className={styles.sectionTwo}>
+        <div className={styles.eenyText}>
+          <p>
+            In August 2018, I started{" "}
+            <span className={styles.eenySpan}>
+              Eeny <br /> Meeny Creative
+            </span>{" "}
+            with a friend. We <br /> wanted to learn on the job, by <br />{" "}
+            founding our own company...
+          </p>
+        </div>
+        <div className={styles.eenyDiv}>
+          <Img fluid={data.eenyLogo.childImageSharp.fluid} />
+        </div>
       </section>
     </Layout>
   )
