@@ -1,8 +1,8 @@
 .topBackground {
   max-width: 100vw;
-  height: 100vh;
+  min-height: 103vh;
   background: linear-gradient(to right, #e6e602, #e6bf02 40%, #e39700);
-  margin-top: -10.3rem;
+  margin-top: -11.3rem;
   left: 0;
   z-index: -500;
 }
@@ -54,7 +54,7 @@ hr {
   line-height: 4rem;
 }
 .sectionTwo {
-  min-height: 100vh;
+  min-height: 84vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
