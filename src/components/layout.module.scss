@@ -1,11 +1,14 @@
 .layout {
   nav {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 500;
-    padding: 2.4rem 6.2rem;
+    padding: 2rem 6.2rem;
+    transition: top 0.3s;
+    background-color: var(--dark-grey);
+    height: 7.5rem;
   }
   ul {
     list-style: none;
@@ -15,7 +18,7 @@
     width: 40%;
     margin-right: 4rem;
     font-size: 2.5rem;
-    font-family: "Neutra Text";
+    font-family: "Neutra Text Light";
 
     li:hover a {
       color: var(--pink);

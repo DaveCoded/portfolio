@@ -34,7 +34,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Neutra Text Light";
+  font-family: "Neutra Text";
   max-width: 100vw;
 }
 
@@ -44,4 +44,8 @@ a {
 
 p {
   color: var(--dark-grey);
+}
+
+h1 {
+  font-family: "Neutra Text Light";
 }

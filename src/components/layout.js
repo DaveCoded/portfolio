@@ -6,11 +6,22 @@ import ListLink from "./ListLink/ListLink"
 import HomeButton from "../components/HomeButton/homebutton"
 
 const Layout = ({ children }) => {
+  var prevScrollpos = window.pageYOffset
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0"
+    } else {
+      document.getElementById("navbar").style.top = "-80px"
+    }
+    prevScrollpos = currentScrollPos
+  }
+
   let year = new Date().getFullYear()
 
   return (
     <div className={styles.layout}>
-      <nav>
+      <nav id="navbar">
         <Link to="/">
           <HomeButton />
         </Link>
