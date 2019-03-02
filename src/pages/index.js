@@ -55,6 +55,23 @@ const HomePage = ({ data }) => {
           <Img fluid={data.eenyLogo.childImageSharp.fluid} />
         </div>
       </section>
+      <section className={styles.sectionThree}>
+        <Img fluid={data.laptop.childImageSharp.fluid} />
+        <p>
+          Now I want to join a team of developers <br />
+          to <span>learn</span> exciting new technologies and methods...
+        </p>
+      </section>
+      <section className={styles.sectionFour}>
+        <Img fluid={data.mountainJump.childImageSharp.fluid} />
+        <p className={styles.paraOne}>
+          To <span>collaborate</span> on something bigger than <br /> the sum of
+          its parts...
+        </p>
+        <p className={styles.paraTwo}>
+          and make the web better for <span>everyone</span>
+        </p>
+      </section>
     </Layout>
   )
 }
@@ -66,6 +83,20 @@ export const query = graphql`
     eenyLogo: file(relativePath: { eq: "header-logo-trim.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    laptop: file(relativePath: { eq: "pointing-laptop.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    mountainJump: file(relativePath: { eq: "mountain-jump.jpg" }) {
+      childImageSharp {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }

@@ -54,7 +54,7 @@ hr {
   line-height: 4rem;
 }
 .sectionTwo {
-  min-height: 84vh;
+  min-height: 90vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,9 +66,61 @@ hr {
 }
 
 .eenySpan {
-  color: #e39700;
+  color: var(--orange);
 }
 
 .eenyDiv {
   width: 60vh;
+}
+
+.sectionThree {
+  max-height: 100vh;
+  position: relative;
+
+  p {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+
+    span {
+      color: var(--pink);
+    }
+  }
+}
+
+.sectionFour {
+  position: relative;
+  height: 100vh;
+
+  div {
+    height: 100vh;
+  }
+
+  p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 4rem;
+  }
+
+  .paraOne {
+    top: 10%;
+
+    span {
+      color: var(--blue);
+    }
+  }
+
+  .paraTwo {
+    top: 80%;
+
+    span {
+      color: var(--orange);
+    }
+  }
 }

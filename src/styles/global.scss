@@ -1,3 +1,10 @@
+:root {
+  --dark-grey: #3a3034;
+  --blue: #1cefef;
+  --pink: #e93b74;
+  --orange: #e39700;
+}
+
 @font-face {
   font-family: "Neutra Text";
   font-style: normal;
@@ -25,4 +32,8 @@ body {
 
 a {
   text-decoration: none;
+}
+
+p {
+  color: var(--dark-grey);
 }
