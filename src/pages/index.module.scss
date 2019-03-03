@@ -45,6 +45,11 @@
   font-size: 8rem;
   color: var(--blue);
   margin-bottom: 0rem;
+}
+.firstBitAnimated {
+  font-size: 8rem;
+  color: var(--blue);
+  margin-bottom: 0rem;
   animation: text 2s 1;
 }
 
@@ -62,6 +67,10 @@
   }
 }
 .secondBit {
+  font-size: 4.4rem;
+  opacity: 1;
+}
+.secondBitAnimated {
   font-size: 4.4rem;
   opacity: 1;
   animation: opacity 2s 1;
