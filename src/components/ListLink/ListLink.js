@@ -10,7 +10,6 @@ const ListLink = props => (
       activeStyle={{
         borderBottom: "3px solid #1cefef",
         paddingBottom: "5px",
-        color: "#e93b74",
       }}
     >
       {props.children}
