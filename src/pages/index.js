@@ -87,6 +87,9 @@ class HomePage extends Component {
       </Layout>
     )
   }
+
+  // Only animate the h1 on first page load
+
   componentDidMount() {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
       this.setState({
