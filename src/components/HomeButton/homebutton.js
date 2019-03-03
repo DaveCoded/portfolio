@@ -5,10 +5,10 @@ const HomeButton = () => (
   <img
     src={house}
     style={{
-      width: "4.8rem",
+      width: "4rem",
       display: "inline-block",
       marginLeft: "3.8rem",
-      marginTop: "-0.6rem",
+      marginTop: "-0.2rem",
     }}
     alt="Home link"
   />

@@ -22,7 +22,8 @@ const HomePage = ({ data }) => {
       <section className={styles.topBackground}>
         <div className={styles.polygon}>
           <h1 className={styles.heading}>
-            Hi. My name is Dave. <br /> Welcome to my portfolio.
+            <span className={styles.firstBit}>Hi. My name is Dave.</span>
+            <span className={styles.secondBit}>Welcome to my portfolio.</span>
           </h1>
           <hr />
         </div>
