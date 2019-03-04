@@ -7,7 +7,7 @@ const HomeButton = () => (
     style={{
       width: "4rem",
       display: "inline-block",
-      marginLeft: "3.8rem",
+      marginLeft: "1rem",
       marginTop: "-0.2rem",
     }}
     alt="Home link"
