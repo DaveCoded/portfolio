@@ -8,6 +8,13 @@ module.exports = {
         name: "images",
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `gpj7wxbgz0qf`,
+        accessToken: `794a3d95e6e779900923d5c9050b6cb99f2ab9d35e5e64eee69c49aee2702118`,
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
   ],
