@@ -35,7 +35,7 @@ class HomePage extends Component {
                 Welcome to my portfolio.
               </span>
             </h1>
-            <hr />
+            <hr className={styles.horizontalRule} />
           </div>
           <SocialBar />
           <div className={styles.socialdiv}>
