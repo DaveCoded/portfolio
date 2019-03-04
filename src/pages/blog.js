@@ -15,7 +15,7 @@ const BlogPost = ({ node }) => {
       }}
     >
       <h3>
-        <Link to={node.slug}>{node.title}</Link>
+        <Link to={`blog/${node.slug}`}>{node.title}</Link>
       </h3>
       <p>{node.createdAt}</p>
       <div>
