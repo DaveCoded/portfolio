@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Link from "gatsby-link"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 import styles from "./projects.module.scss"
+import Project from "../components/Project/Project"
 
+/*
 const Project = ({ node }) => {
   return (
     <article
@@ -32,7 +32,18 @@ const Project = ({ node }) => {
 }
 
 const ProjectsPage = props => {
-  console.log(props)
+  return (
+    <Layout>
+      <main className={styles.main}>
+        {props.data.allContentfulProject.edges.map(edge => (
+          <Project key={edge.node.id} node={edge.node} />
+        ))}
+      </main>
+    </Layout>
+  )
+}*/
+
+const ProjectsPage = props => {
   return (
     <Layout>
       <main className={styles.main}>

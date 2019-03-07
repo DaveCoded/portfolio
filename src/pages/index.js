@@ -25,7 +25,7 @@ class HomePage extends Component {
 
     return (
       <Layout>
-        <section className={styles.topBackground}>
+        <header className={styles.topBackground}>
           <div className={styles.polygon}>
             <h1 className={styles.heading}>
               <span className={this.state.firstSpanClass}>
@@ -51,7 +51,7 @@ class HomePage extends Component {
               to all
             </p>
           </div>
-        </section>
+        </header>
         <section className={styles.sectionTwo}>
           <div className={styles.eenyText}>
             <p>
