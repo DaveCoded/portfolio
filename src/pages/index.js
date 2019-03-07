@@ -20,7 +20,7 @@ class HomePage extends Component {
   render() {
     const githubURL = "https://github.com/DaveCoded"
     const linkedinURL = "https://www.linkedin.com/in/dave-bernhard-93b0b876/"
-    const twitterURL = "https://twitter.com/earthwormdave"
+    const twitterURL = "https://twitter.com/daveforall"
     const coderlistURL = "https://www.coderlist.io/profile/coderlist423"
 
     return (
