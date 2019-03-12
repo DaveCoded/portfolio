@@ -18,5 +18,19 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Pompiere`,
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`],
+          },
+        ],
+      },
+    },
   ],
 }
