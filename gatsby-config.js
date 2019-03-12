@@ -24,6 +24,7 @@ module.exports = {
         fonts: [
           {
             family: `Pompiere`,
+            subset: [`latin`],
           },
           {
             family: `Open Sans`,

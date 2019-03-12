@@ -17,7 +17,7 @@ class Project extends Component {
       <Layout>
         <article className={styles.projectWrapper}>
           <h1>{title}</h1>
-          <p>{link}</p>
+          <a href={link}>{link}</a>
           <div className={styles.featuredImageWrapper}>
             <Img sizes={featuredImage.sizes} />
           </div>
@@ -38,6 +38,7 @@ export const pageQuery = graphql`
   query($slug: String!) {
     contentfulProject(slug: { eq: $slug }) {
       title
+      link
       createdAt(formatString: "MMMM DD, YYYY")
       featuredImage {
         sizes(maxWidth: 600) {
