@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import styles from "./project-template.module.scss"
 
 class Project extends Component {
   render() {
@@ -14,22 +15,18 @@ class Project extends Component {
     } = this.props.data.contentfulProject
     return (
       <Layout>
-        <h1
-          style={{
-            borderBottom: "1px solid #ccc",
-            paddingBottom: "0.5rem",
-          }}
-        >
-          {title}
-        </h1>
-        <p>{link}</p>
-        <div style={{ width: "60vw" }}>
-          <Img sizes={featuredImage.sizes} />
-        </div>
-        <hr />
-        <div
-          dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }}
-        />
+        <article className={styles.projectWrapper}>
+          <h1>{title}</h1>
+          <p>{link}</p>
+          <div className={styles.featuredImageWrapper}>
+            <Img sizes={featuredImage.sizes} />
+          </div>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: content.childMarkdownRemark.html,
+            }}
+          />
+        </article>
       </Layout>
     )
   }
