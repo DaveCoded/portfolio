@@ -7,7 +7,10 @@ import Img from "gatsby-image"
 const Project = ({ node }) => (
   <Link to={`projects/${node.slug}`}>
     <div>
-      <Img resolutions={node.featuredImage.resolutions} />
+      <Img
+        fluid={node.featuredImage.fluid}
+        style={{ borderRadius: "1.5rem" }}
+      />
     </div>
   </Link>
 )

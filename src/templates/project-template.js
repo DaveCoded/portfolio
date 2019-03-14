@@ -19,7 +19,10 @@ class Project extends Component {
           <h1>{title}</h1>
           <a href={link}>{link}</a>
           <div className={styles.featuredImageWrapper}>
-            <Img sizes={featuredImage.sizes} />
+            <Img
+              sizes={featuredImage.sizes}
+              style={{ borderRadius: "1.5rem" }}
+            />
           </div>
           <div
             dangerouslySetInnerHTML={{
