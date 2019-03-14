@@ -48,12 +48,14 @@
     border-top: solid 3px var(--pink);
     border-bottom: solid 3px var(--pink);
     padding: 4rem;
-    margin: 4rem 0;
-    font-size: 3rem;
-    font-family: "Pompiere";
+    margin: 6rem auto;
+    width: 80%;
+    text-align: center;
 
     p {
       margin-bottom: 0;
+      font-size: 3.4rem;
+      font-family: "Pompiere", "Neutra Text Light", sans-serif;
     }
   }
 }
