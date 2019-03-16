@@ -9,7 +9,7 @@ const Project = ({ node }) => (
     <div>
       <Img
         fluid={node.featuredImage.fluid}
-        style={{ borderRadius: "1.5rem" }}
+        style={{ borderRadius: "0.6rem" }}
       />
     </div>
   </Link>

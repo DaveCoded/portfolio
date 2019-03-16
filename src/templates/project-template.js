@@ -21,7 +21,7 @@ class Project extends Component {
           <div className={styles.featuredImageWrapper}>
             <Img
               sizes={featuredImage.sizes}
-              style={{ borderRadius: "1.5rem" }}
+              style={{ borderRadius: "0.6rem" }}
             />
           </div>
           <div
