@@ -3,7 +3,14 @@ import styles from "./ContactForm.module.scss"
 
 const ContactForm = () => (
   <section className={styles.formWrapper}>
-    <form method="post" action="#">
+    <form
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      action="#"
+    >
+      <input type="hidden" name="bot-field" />
       <div className={styles.formInput}>
         <label htmlFor="name">Name</label>
         <input type="text" name="name" id="name" />
