@@ -3,7 +3,7 @@ import styles from "./ContactForm.module.scss"
 
 const ContactForm = () => (
   <section className={styles.formWrapper}>
-    <form name="contact" method="POST" data-netlify="true" action="/contact">
+    <form name="contact" method="POST" data-netlify="true" action="/contact/">
       <div className={styles.formInput}>
         <label htmlFor="name">Name</label>
         <input type="text" name="name" id="name" />
