@@ -13,7 +13,14 @@ const Contact = () => (
       >
         Get in touch
       </h1>
-      <form name="contact" method="post" action="/success/" data-netlify="true">
+      <form
+        name="contact"
+        method="post"
+        action="/success/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="bot-field" />
         <input name="name" placeholder="Your Name" type="text" />
         <button>Send</button>
       </form>
