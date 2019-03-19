@@ -4,35 +4,15 @@ import styles from "./ContactForm.module.scss"
 class ContactForm extends Component {
   render() {
     return (
-      <section className={styles.formWrapper}>
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          action="/contact/"
-        >
-          <div className={styles.formInput}>
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" />
-          </div>
-          <div className={styles.formInput}>
-            <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" />
-          </div>
-          <div>
-            <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="6" />
-          </div>
-          <ul>
-            <li>
-              <input type="submit" value="Send Message" />
-            </li>
-            <li>
-              <input type="reset" value="Clear" />
-            </li>
-          </ul>
-        </form>
-      </section>
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input name="name" placeholder="Your Name" type="text" />
+        <button>Send</button>
+      </form>
     )
   }
 }
