@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layout"
-import ContactForm from "../components/ContactForm/ContactForm"
 
 const Contact = () => (
   <Layout>
@@ -14,7 +13,10 @@ const Contact = () => (
       >
         Get in touch
       </h1>
-      <ContactForm />
+      <form name="contact" method="post" action="/success/" data-netlify="true">
+        <input name="name" placeholder="Your Name" type="text" />
+        <button>Send</button>
+      </form>
     </div>
   </Layout>
 )
