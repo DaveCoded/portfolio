@@ -11,4 +11,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 10;
+}
+
+.socialdiv {
+  width: 7.2rem;
+  height: 20.5rem;
+  margin-top: 0.5rem;
+  position: relative;
+  right: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 20;
 }

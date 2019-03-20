@@ -2,6 +2,7 @@ import React from "react"
 import { navigateTo } from "gatsby-link"
 
 import Layout from "../components/layout"
+import SocialBar from "../components/SocialBar/social-bar"
 import BackgroundSection from "../components/contactBackground"
 import styles from "./contact.module.scss"
 
@@ -87,6 +88,7 @@ export default class Contact extends React.Component {
                 <button type="submit">Send</button>
               </p>
             </form>
+            <SocialBar />
           </div>
         </BackgroundSection>
       </Layout>
