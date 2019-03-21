@@ -10,4 +10,63 @@
   background-color: rgba(255, 255, 255, 0.8);
   min-width: 70vw;
   min-height: 26vw;
+  padding: 5rem;
+  border-radius: 0.6rem;
+
+  h1 {
+    margin-bottom: 3rem;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-row-gap: 2rem;
+    grid-column-gap: 10rem;
+
+    button {
+      background-color: var(--pink);
+    }
+  }
+}
+
+.Input {
+  grid-column: 2;
+
+  input {
+    width: 100%;
+    font-size: 2rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    /* When top input is focused, the 3px border that's created pushes the bottom input down, so we put in an
+        invisible border on the initial state to stop this from happening */
+    border-bottom: 3px solid transparent;
+  }
+}
+
+.Textarea {
+  grid-row: 1 / -1;
+  grid-column: 1;
+
+  textarea {
+    min-width: 100%;
+    font-size: 2rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    resize: none;
+  }
+}
+
+.buttonP {
+  grid-column: 2;
+  align-self: end;
+  justify-self: center;
 }

@@ -3,7 +3,7 @@
   --blue: #1cefef;
   --pink: #e93b74;
   --light-pink: #ff568e;
-  --orange: #e39700;
+  --orange: #dfba00;
 }
 
 @font-face {
@@ -38,23 +38,28 @@ body {
   max-width: 100vw;
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
   background-color: #fff;
+  border-radius: 10px;
   width: 16px;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
   box-shadow: inset 0 0 8px grey;
   border-radius: 10px;
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, var(--pink) 35%, var(--orange));
   box-shadow: inset 0 0 8px grey;
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover {
   background: #cc4287;
   border: 1px solid var(--blue);
 }

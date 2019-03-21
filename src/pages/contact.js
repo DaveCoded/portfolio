@@ -60,7 +60,7 @@ export default class Contact extends React.Component {
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </p>
-                <p>
+                <p className={styles.Input}>
                   <label>
                     Your name:
                     <br />
@@ -71,7 +71,7 @@ export default class Contact extends React.Component {
                     />
                   </label>
                 </p>
-                <p>
+                <p className={styles.Input}>
                   <label>
                     Your email:
                     <br />
@@ -82,14 +82,18 @@ export default class Contact extends React.Component {
                     />
                   </label>
                 </p>
-                <p>
+                <p className={styles.Textarea}>
                   <label>
                     Message:
                     <br />
-                    <textarea name="message" onChange={this.handleChange} />
+                    <textarea
+                      name="message"
+                      rows="10"
+                      onChange={this.handleChange}
+                    />
                   </label>
                 </p>
-                <p>
+                <p className={styles.buttonP}>
                   <button type="submit">Send</button>
                 </p>
               </form>
