@@ -7,14 +7,16 @@
 }
 
 .overlay {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(rgb(58, 48, 52), 0.85);
   min-width: 70vw;
   min-height: 26vw;
   padding: 5rem;
   border-radius: 0.6rem;
+  box-shadow: var(--box-shadow);
 
   h1 {
     margin-bottom: 3rem;
+    color: #fff;
   }
 
   form {
@@ -26,6 +28,13 @@
 
     button {
       background-color: var(--pink);
+      padding: 1rem 4.8rem;
+      border: none;
+      border-radius: 0.6rem;
+      color: white;
+      font-family: inherit;
+      font-size: 2.4rem;
+      cursor: pointer;
     }
   }
 }
