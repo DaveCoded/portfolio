@@ -61,37 +61,31 @@ export default class Contact extends React.Component {
                   </label>
                 </p>
                 <p className={styles.Input}>
-                  <label>
-                    Your name:
-                    <br />
-                    <input
-                      type="text"
-                      name="name"
-                      onChange={this.handleChange}
-                    />
-                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    onChange={this.handleChange}
+                  />
+                  <label htmlFor="name">Your name</label>
                 </p>
                 <p className={styles.Input}>
-                  <label>
-                    Your email:
-                    <br />
-                    <input
-                      type="email"
-                      name="email"
-                      onChange={this.handleChange}
-                    />
-                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                    onChange={this.handleChange}
+                  />
+                  <label htmlFor="email">Your email</label>
                 </p>
                 <p className={styles.Textarea}>
-                  <label>
-                    Message:
-                    <br />
-                    <textarea
-                      name="message"
-                      rows="10"
-                      onChange={this.handleChange}
-                    />
-                  </label>
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    rows="10"
+                    onChange={this.handleChange}
+                  />
+                  <label htmlFor-="message">Message</label>
                 </p>
                 <p className={styles.buttonP}>
                   <button type="submit">Send</button>
