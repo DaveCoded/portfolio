@@ -66,6 +66,7 @@ export default class Contact extends React.Component {
                     name="name"
                     placeholder="Your name"
                     onChange={this.handleChange}
+                    required
                   />
                   <label htmlFor="name">Your name</label>
                 </p>
@@ -75,6 +76,7 @@ export default class Contact extends React.Component {
                     name="email"
                     placeholder="Email address"
                     onChange={this.handleChange}
+                    required
                   />
                   <label htmlFor="email">Your email</label>
                 </p>
@@ -84,6 +86,7 @@ export default class Contact extends React.Component {
                     placeholder="Message"
                     rows="10"
                     onChange={this.handleChange}
+                    required
                   />
                   <label htmlFor-="message">Message</label>
                 </p>
