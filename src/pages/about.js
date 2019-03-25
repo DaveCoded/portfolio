@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 
 const About = () => (
   <Layout>
-    <p>Dave is so cool.</p>
+    <p>Dave is super cool.</p>
   </Layout>
 )
 
