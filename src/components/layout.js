@@ -5,6 +5,8 @@ import styles from "./layout.module.scss"
 import ListLink from "./ListLink/ListLink"
 import HomeButton from "../components/HomeButton/homebutton"
 
+import cv from "../assets/documents/CV.pdf"
+
 class Layout extends Component {
   componentDidMount() {
     var prevScrollpos = window.pageYOffset
@@ -28,11 +30,15 @@ class Layout extends Component {
           <Link to="/">
             <HomeButton />
           </Link>
-          <ul>
+          <ul className="nav-link">
             <ListLink to="/about/">about</ListLink>
             <ListLink to="/projects/">projects</ListLink>
             <ListLink to="/blog/">blog</ListLink>
-            <ListLink to="/cv/">cv</ListLink>
+            <li>
+              <a href={cv} target="_blank" rel="noopener noreferrer">
+                cv
+              </a>
+            </li>
             <ListLink to="/contact/">contact</ListLink>
           </ul>
         </nav>
