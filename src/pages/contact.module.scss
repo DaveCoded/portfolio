@@ -1,9 +1,21 @@
+.background {
+  width: 100%;
+  max-height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 .formContainer {
+  width: 100%;
   padding: 10rem;
   min-height: 100vh;
   display: grid;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .overlay {
