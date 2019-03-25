@@ -41,13 +41,10 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-<<<<<<< HEAD
         <Img
           fluid={this.props.data.bubbles.childImageSharp.fluid}
           className={styles.background}
         />
-=======
->>>>>>> dev
         <div className={styles.formContainer}>
           <div className={styles.overlay}>
             <h1>Get in touch</h1>
