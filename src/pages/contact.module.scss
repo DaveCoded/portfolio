@@ -1,0 +1,141 @@
+.background {
+  width: 100%;
+  max-height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.formContainer {
+  width: 100%;
+  padding: 10rem;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  background-color: rgba(rgb(58, 48, 52), 0.85);
+  min-width: 70vw;
+  min-height: 26vw;
+  padding: 5rem;
+  border-radius: 0.6rem;
+  box-shadow: var(--box-shadow);
+
+  h1 {
+    margin-bottom: 3rem;
+    color: #fff;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-row-gap: 2rem;
+    grid-column-gap: 10rem;
+
+    label {
+      font-size: 2rem;
+      color: #fff;
+      display: block;
+      transition: all 0.3s;
+      font-family: "Neutra Text Light";
+      margin-left: 1.9rem;
+      margin-top: 0.5rem;
+    }
+
+    button {
+      &,
+      &:link,
+      &:visited {
+        background-color: var(--pink);
+        padding: 1rem 4.8rem;
+        border: solid 2px transparent;
+        border-radius: 0.6rem;
+        color: white;
+        font-family: inherit;
+        font-size: 2.4rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--light-pink);
+        }
+
+        &:focus {
+          background-color: var(--light-pink);
+          outline: none;
+          border-color: var(--orange);
+        }
+      }
+    }
+  }
+}
+
+.Input {
+  grid-column: 2;
+
+  input {
+    width: 100%;
+    font-size: 2rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-bottom: 3px solid transparent;
+
+    &:placeholder-shown + label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #55c57a;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid #ff7730;
+    }
+  }
+}
+
+.Textarea {
+  grid-row: 1 / -1;
+  grid-column: 1;
+
+  textarea {
+    min-width: 100%;
+    font-size: 2rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: solid 1px transparent;
+    resize: none;
+
+    & + label {
+      visibility: hidden;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+      border-color: var(--orange);
+    }
+  }
+}
+
+.buttonP {
+  grid-column: 2;
+  align-self: end;
+  justify-self: center;
+}
