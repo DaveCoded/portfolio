@@ -3,7 +3,7 @@ import { navigateTo } from "gatsby-link"
 
 import Layout from "../components/layout"
 import SocialBar from "../components/SocialBar/social-bar"
-import BackgroundSection from "../components/contactBackground"
+// import BackgroundSection from "../components/contactBackground"
 import styles from "./contact.module.scss"
 
 function encode(data) {
@@ -40,64 +40,64 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <BackgroundSection>
-          <div className={styles.formContainer}>
-            <div className={styles.overlay}>
-              <h1>Get in touch</h1>
-              <form
-                name="contact"
-                method="post"
-                action="/thanks/"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                onSubmit={this.handleSubmit}
-              >
-                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" />
-                <p hidden>
-                  <label>
-                    Don’t fill this out:{" "}
-                    <input name="bot-field" onChange={this.handleChange} />
-                  </label>
-                </p>
-                <p className={styles.Input}>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your name"
-                    onChange={this.handleChange}
-                    required
-                  />
-                  <label htmlFor="name">Your name</label>
-                </p>
-                <p className={styles.Input}>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email address"
-                    onChange={this.handleChange}
-                    required
-                  />
-                  <label htmlFor="email">Your email</label>
-                </p>
-                <p className={styles.Textarea}>
-                  <textarea
-                    name="message"
-                    placeholder="Message"
-                    rows="10"
-                    onChange={this.handleChange}
-                    required
-                  />
-                  <label htmlFor-="message">Message</label>
-                </p>
-                <p className={styles.buttonP}>
-                  <button type="submit">Send</button>
-                </p>
-              </form>
-              <SocialBar />
-            </div>
+        {/* <BackgroundSection> */}
+        <div className={styles.formContainer}>
+          <div className={styles.overlay}>
+            <h1>Get in touch</h1>
+            <form
+              name="contact"
+              method="post"
+              action="/thanks/"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={this.handleSubmit}
+            >
+              {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                <label>
+                  Don’t fill this out:{" "}
+                  <input name="bot-field" onChange={this.handleChange} />
+                </label>
+              </p>
+              <p className={styles.Input}>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  onChange={this.handleChange}
+                  required
+                />
+                <label htmlFor="name">Your name</label>
+              </p>
+              <p className={styles.Input}>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email address"
+                  onChange={this.handleChange}
+                  required
+                />
+                <label htmlFor="email">Your email</label>
+              </p>
+              <p className={styles.Textarea}>
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  rows="10"
+                  onChange={this.handleChange}
+                  required
+                />
+                <label htmlFor-="message">Message</label>
+              </p>
+              <p className={styles.buttonP}>
+                <button type="submit">Send</button>
+              </p>
+            </form>
+            <SocialBar />
           </div>
-        </BackgroundSection>
+        </div>
+        {/* </BackgroundSection> */}
       </Layout>
     )
   }
