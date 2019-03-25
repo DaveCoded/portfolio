@@ -3,7 +3,6 @@ import { navigateTo } from "gatsby-link"
 
 import Layout from "../components/layout"
 import SocialBar from "../components/SocialBar/social-bar"
-// import BackgroundSection from "../components/contactBackground"
 import styles from "./contact.module.scss"
 
 function encode(data) {
@@ -40,7 +39,6 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        {/* <BackgroundSection> */}
         <div className={styles.formContainer}>
           <div className={styles.overlay}>
             <h1>Get in touch</h1>
@@ -97,7 +95,6 @@ export default class Contact extends React.Component {
             <SocialBar />
           </div>
         </div>
-        {/* </BackgroundSection> */}
       </Layout>
     )
   }
