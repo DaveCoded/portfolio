@@ -31,6 +31,7 @@ class Layout extends Component {
             <HomeButton />
           </Link>
           <ul className="nav-link">
+            <ListLink to="/">home</ListLink>
             <ListLink to="/about/">about</ListLink>
             <ListLink to="/projects/">projects</ListLink>
             <ListLink to="/blog/">blog</ListLink>
