@@ -108,9 +108,9 @@ export default class Contact extends React.Component {
 
 export const query = graphql`
   query {
-    bubbles: file(relativePath: { eq: "mountain-jump.jpg" }) {
+    bubbles: file(relativePath: { eq: "make-magic.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
