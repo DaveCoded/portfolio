@@ -1,6 +1,7 @@
 import React from "react"
 import { navigateTo } from "gatsby-link"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SocialBar from "../components/SocialBar/social-bar"
@@ -40,6 +41,10 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
+        <Img
+          fluid={this.props.data.bubbles.childImageSharp.fluid}
+          className={styles.background}
+        />
         <div className={styles.formContainer}>
           <div className={styles.overlay}>
             <h1>Get in touch</h1>
