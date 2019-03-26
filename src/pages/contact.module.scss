@@ -4,6 +4,10 @@
   position: relative;
   top: 0;
   left: 0;
+
+  picture > img {
+    object-position: top !important;
+  }
 }
 
 .formContainer {
