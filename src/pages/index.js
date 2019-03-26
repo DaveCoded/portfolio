@@ -100,7 +100,7 @@ export const query = graphql`
         }
       }
     }
-    laptop: file(relativePath: { eq: "pointing-laptop.jpg" }) {
+    laptop: file(relativePath: { eq: "make-magic.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
