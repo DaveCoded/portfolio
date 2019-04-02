@@ -14,7 +14,7 @@ class Project extends Component {
       content,
     } = this.props.data.contentfulProject
     return (
-      <Layout>
+      <Layout colorProp="blue">
         <article className={styles.projectWrapper}>
           <h1>{title}</h1>
           <a href={link}>{link}</a>
