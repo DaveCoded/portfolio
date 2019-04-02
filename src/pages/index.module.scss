@@ -1,0 +1,7 @@
+.background {
+  height: 100vh;
+
+  &:before {
+    background-position: 0px 65%;
+  }
+}

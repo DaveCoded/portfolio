@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SocialBar from "../components/SocialBar/social-bar"
+import BackgroundImage from "gatsby-background-image"
+import styles from "./index.module.scss"
 
 class HomePage extends Component {
   constructor(props) {
@@ -13,6 +15,10 @@ class HomePage extends Component {
     return (
       <Layout>
         <SocialBar />
+        <BackgroundImage
+          className={styles.background}
+          fluid={this.props.data.background.childImageSharp.fluid}
+        />
         {/* <Img fluid={this.props.data.background.childImageSharp.fluid} /> */}
       </Layout>
     )
@@ -38,7 +44,7 @@ export default HomePage
 
 export const query = graphql`
   query {
-    background: file(relativePath: { eq: "home_background.jpg" }) {
+    background: file(relativePath: { eq: "backpng.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
