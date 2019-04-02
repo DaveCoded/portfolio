@@ -31,7 +31,7 @@ const BlogPost = ({ node }) => {
 const IndexPage = props => {
   console.log(props)
   return (
-    <Layout>
+    <Layout colorProp="blue">
       {props.data.allContentfulBlogPost.edges.map(edge => (
         <BlogPost key={edge.node.id} node={edge.node} />
       ))}

@@ -7,7 +7,7 @@ import Project from "../components/Project/Project"
 
 const ProjectsPage = props => {
   return (
-    <Layout>
+    <Layout colorProp="blue">
       <main className={styles.main}>
         <h1>Projects</h1>
         {props.data.allContentfulProject.edges.map(edge => (

@@ -40,7 +40,7 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout colorProp="blue">
         <Img
           fluid={this.props.data.bubbles.childImageSharp.fluid}
           className={styles.background}

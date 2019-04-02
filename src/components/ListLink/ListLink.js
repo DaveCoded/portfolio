@@ -6,7 +6,7 @@ const ListLink = props => (
     <Link
       to={props.to}
       activeStyle={{
-        borderBottom: "3px solid #1cefef",
+        borderBottom: "3px solid #eb3484",
         paddingBottom: "5px",
       }}
     >

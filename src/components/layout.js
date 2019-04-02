@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import styles from "./layout.module.scss"
 
 import ListLink from "./ListLink/ListLink"
-import HomeButton from "../components/HomeButton/homebutton"
 
 import cv from "../assets/documents/CV.pdf"
 
@@ -31,11 +30,16 @@ class Layout extends Component {
     return (
       <div className={styles.layout}>
         <nav style={{ backgroundColor: navColor }} id="navbar">
-          <Link to="/">
-            <HomeButton />
+          <Link
+            className={styles.homeLink}
+            to="/"
+            activeStyle={{
+              display: "none",
+            }}
+          >
+            home
           </Link>
           <ul className="nav-link">
-            <ListLink to="/">home</ListLink>
             <ListLink to="/about/">about</ListLink>
             <ListLink to="/projects/">projects</ListLink>
             <ListLink to="/blog/">blog</ListLink>
