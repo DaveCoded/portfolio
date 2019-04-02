@@ -23,10 +23,14 @@ class Layout extends Component {
 
   render() {
     let year = new Date().getFullYear()
+    let navColor = ""
+    if (this.props.colorProp === "blue") {
+      navColor = "#152063"
+    }
 
     return (
       <div className={styles.layout}>
-        <nav id="navbar">
+        <nav style={{ backgroundColor: navColor }} id="navbar">
           <Link to="/">
             <HomeButton />
           </Link>

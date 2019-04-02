@@ -18,8 +18,10 @@ class HomePage extends Component {
         <BackgroundImage
           className={styles.background}
           fluid={this.props.data.background.childImageSharp.fluid}
-        />
-        {/* <Img fluid={this.props.data.background.childImageSharp.fluid} /> */}
+        >
+          <h1 hidden>Dave</h1>
+          <h2>Front-end Web Developer</h2>
+        </BackgroundImage>
       </Layout>
     )
   }

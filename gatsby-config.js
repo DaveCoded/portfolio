@@ -27,8 +27,8 @@ module.exports = {
             subset: [`latin`],
           },
           {
-            family: `Open Sans`,
-            variants: [`400`, `700`],
+            family: `Lato`,
+            variants: [`300`, `400`, `700`],
           },
         ],
       },
