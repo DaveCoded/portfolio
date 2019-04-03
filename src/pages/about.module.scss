@@ -1,0 +1,63 @@
+.header {
+  min-height: 100vh;
+  background-color: oldlace;
+}
+
+.eeny {
+  height: 88vh;
+  display: flex;
+
+  & > div {
+    flex: 50%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    & > div {
+      width: 45%;
+    }
+
+    p {
+      font-size: 3.1rem;
+      width: 68%;
+    }
+  }
+}
+
+.leftDiv {
+  background-color: #b9f3f2;
+}
+
+.rightDiv {
+  background-color: #f3c7db;
+}
+
+.laptop {
+  height: 88vh;
+  display: flex;
+
+  p {
+    font-size: 3.1rem;
+    width: 54%;
+  }
+
+  & > div {
+    flex: 50%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    & > div {
+      width: 100%;
+      min-height: 100%;
+    }
+  }
+}
+
+.betterWeb {
+  min-height: 90vh;
+  background: linear-gradient(to bottom right, #1e2341, #3b4681);
+  color: #fff;
+}
