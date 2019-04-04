@@ -38,7 +38,18 @@ const About = props => (
         </p>
       </div>
     </section>
-    <section className={styles.betterWeb}>BETTERWEB</section>
+    <section className={styles.betterWeb}>
+      <p>
+        To collaborate on something
+        <br />
+        bigger than the sum of its parts
+      </p>
+      <hr />
+      <p>
+        and make the web better <br />
+        for everyone
+      </p>
+    </section>
   </Layout>
 )
 

@@ -61,8 +61,7 @@ textarea::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover,
 textarea::-webkit-scrollbar-thumb:hover {
-  background: #cc4287;
-  border: 1px solid var(--blue);
+  border: 2px solid #1d1d1d;
 }
 
 h1 {
@@ -74,9 +73,11 @@ a {
   text-decoration: none;
 }
 
-.nav-link a {
-  display: inline-block;
-  color: white;
+.nav-link {
+  a {
+    display: inline-block;
+    color: white;
+  }
 }
 
 p {

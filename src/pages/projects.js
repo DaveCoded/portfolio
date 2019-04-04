@@ -9,7 +9,6 @@ const ProjectsPage = props => {
   return (
     <Layout colorProp="blue">
       <main className={styles.main}>
-        <h1>Projects</h1>
         {props.data.allContentfulProject.edges.map(edge => (
           <Project key={edge.node.id} node={edge.node} />
         ))}

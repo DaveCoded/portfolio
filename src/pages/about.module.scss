@@ -1,6 +1,6 @@
 .header {
   min-height: 100vh;
-  background-color: oldlace;
+  // background: linear-gradient(to top left, #1e2341, #3b4681);
 }
 
 .eeny {
@@ -59,5 +59,21 @@
 .betterWeb {
   min-height: 90vh;
   background: linear-gradient(to bottom right, #1e2341, #3b4681);
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: #fff;
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  hr {
+    width: 80vw;
+    border: 1px solid #fff;
+    background-color: #fff;
+    margin: 7rem 0;
+  }
 }

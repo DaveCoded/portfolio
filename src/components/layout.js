@@ -24,7 +24,7 @@ class Layout extends Component {
     let year = new Date().getFullYear()
     let navColor = ""
     if (this.props.colorProp === "blue") {
-      navColor = "#152063"
+      navColor = "rgb(21, 32, 99)"
     }
 
     return (
