@@ -111,7 +111,7 @@ export const query = graphql`
     bubbles: file(relativePath: { eq: "telephone.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
