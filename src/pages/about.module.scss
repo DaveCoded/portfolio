@@ -1,6 +1,6 @@
 .container {
   margin: 13rem 17rem;
-  height: 70vh;
+  min-height: 70vh;
   display: flex;
 }
 
@@ -16,6 +16,24 @@
   width: 100%;
   border-radius: 5px;
   box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.48);
+  padding: 6.2rem 4.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: 2rem;
+    color: #152063;
+  }
+
+  p:not(:last-of-type) {
+    margin-bottom: 1.9rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+    color: var(--pink);
+    margin-bottom: 1.9rem;
+  }
 }
 
 .eeny {

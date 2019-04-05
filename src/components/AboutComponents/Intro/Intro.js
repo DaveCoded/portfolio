@@ -2,9 +2,11 @@ import React from "react"
 import Img from "gatsby-image"
 import { graphql, StaticQuery } from "gatsby"
 
+import styles from "./Intro.module.scss"
+
 const Intro = () => (
   <React.Fragment>
-    <div>
+    <div className={styles.text}>
       <p>
         Hi. Thank you for coming to check out my portfolio. It leverages the
         awesome power of Gatsby, which lets me write React code, while you enjoy
@@ -32,7 +34,12 @@ const Intro = () => (
           }
         }
       `}
-      render={data => <Img fluid={data.profile.childImageSharp.fluid} />}
+      render={data => (
+        <div className={styles.image}>
+          <Img fluid={data.profile.childImageSharp.fluid} />
+          <p>Also, this is my face</p>
+        </div>
+      )}
     />
   </React.Fragment>
 )
