@@ -3,6 +3,25 @@
   // background: linear-gradient(to top left, #1e2341, #3b4681);
 }
 
+.container {
+  margin: 10rem 10rem;
+  background-color: lightblue;
+  height: 70vh;
+  display: flex;
+}
+
+.buttonColumn {
+  margin: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.contentColumn {
+  background-color: lightgoldenrodyellow;
+  width: 100%;
+}
+
 .eeny {
   height: 88vh;
   display: flex;

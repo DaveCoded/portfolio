@@ -1,12 +1,28 @@
 import React from "react"
 import Img from "gatsby-image"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import Button from "../components/Button/Button"
+import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./about.module.scss"
 
 const About = props => (
   <Layout colorProp="blue">
-    <header className={styles.header}>HEADER</header>
+    <header className={styles.header}>
+      <div className={styles.container}>
+        <div className={styles.buttonColumn}>
+          <Button buttonText="intro" />
+          <Button buttonText="coding" />
+          <Button buttonText="tech" />
+          <Button buttonText="interests" />
+        </div>
+        <div className={styles.contentColumn}>
+          Conditionally render components here
+        </div>
+      </div>
+      <SocialBar />
+    </header>
     <section className={styles.eeny}>
       <div className={styles.leftDiv}>
         <p>
