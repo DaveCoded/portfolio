@@ -12,12 +12,12 @@ const About = props => (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.buttonColumn}>
-          <Button buttonText="intro" />
-          <Button buttonText="coding" />
-          <Button buttonText="tech" />
-          <Button buttonText="interests" />
+          <Button active>intro</Button>
+          <Button>coding</Button>
+          <Button>tech</Button>
+          <Button>interests</Button>
         </div>
-        <div className={styles.contentColumn}>
+        <div className={styles.contentBox}>
           Conditionally render components here
         </div>
       </div>

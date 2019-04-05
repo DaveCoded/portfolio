@@ -1,25 +1,25 @@
 .header {
-  min-height: 100vh;
   // background: linear-gradient(to top left, #1e2341, #3b4681);
 }
 
 .container {
-  margin: 10rem 10rem;
-  background-color: lightblue;
+  margin: 13rem 17rem;
   height: 70vh;
   display: flex;
 }
 
 .buttonColumn {
-  margin: 8rem 0;
+  margin: 8rem 11rem 8rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.contentColumn {
-  background-color: lightgoldenrodyellow;
+.contentBox {
+  border: solid 4px #bd07b7;
   width: 100%;
+  border-radius: 5px;
+  box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.48);
 }
 
 .eeny {
