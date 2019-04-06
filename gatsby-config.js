@@ -23,10 +23,6 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Pompiere`,
-            subset: [`latin`],
-          },
-          {
             family: `Lato`,
             variants: [`300`, `400`, `700`],
           },
