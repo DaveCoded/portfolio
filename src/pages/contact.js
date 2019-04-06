@@ -88,7 +88,6 @@ export default class Contact extends React.Component {
                 <textarea
                   name="message"
                   placeholder="Message"
-                  rows="10"
                   onChange={this.handleChange}
                   required
                 />

@@ -23,13 +23,13 @@
 }
 
 .overlay {
-  background-color: rgba(rgb(58, 48, 52), 0.85);
+  background-color: rgba(21, 32, 99, 0.75);
   min-width: 70vw;
   min-height: 26vw;
-  padding: 5rem;
+  padding: 2rem 5rem 6rem 5rem;
   border-radius: 0.6rem;
   box-shadow: var(--box-shadow);
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   h1 {
     margin-bottom: 3rem;
@@ -118,6 +118,7 @@
 
   textarea {
     min-width: 100%;
+    min-height: 100%;
     font-size: 2rem;
     font-family: inherit;
     color: inherit;
