@@ -13,7 +13,7 @@ class BlogPost extends Component {
       content,
     } = this.props.data.contentfulBlogPost
     return (
-      <Layout>
+      <Layout colorProp="blue">
         <h1
           style={{
             borderBottom: "1px solid #ccc",

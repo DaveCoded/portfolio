@@ -1,0 +1,45 @@
+.indexLayout {
+  margin: 13rem 9rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5rem;
+}
+
+.postLayout {
+  border: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  grid-template-rows: max-content 1fr;
+  grid-column-gap: 4rem;
+  padding: 2rem;
+
+  h3 {
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+    font-family: "Lato";
+    font-weight: 400;
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .createdAt {
+    font-size: 1.8rem;
+    color: #777;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 2rem;
+    color: #152063;
+  }
+
+  & > div > a > div {
+    height: 100%;
+  }
+}
+
+.featuredImage {
+}
+
+.contentBox {
+}

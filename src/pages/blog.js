@@ -5,24 +5,22 @@ import Link from "gatsby-link"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 
+import styles from "./blog.module.scss"
+
 const BlogPost = ({ node }) => {
   return (
-    <div
-      style={{
-        marginBottom: "1.5rem",
-        padding: "1.5rem",
-        border: "1px solid #ccc",
-      }}
-    >
+    <div className={styles.postLayout}>
       <h3>
         <Link to={`blog/${node.slug}`}>{node.title}</Link>
       </h3>
-      <p>{node.createdAt}</p>
-      <div>
-        <div>
-          <Img resolutions={node.featuredImage.resolutions} />
-        </div>
-        <div>{node.content.childMarkdownRemark.excerpt}</div>
+      <div className={styles.featuredImage}>
+        <Link to={`blog/${node.slug}`}>
+          <Img fluid={node.featuredImage.fluid} />
+        </Link>
+      </div>
+      <div className={styles.contentBox}>
+        <p className={styles.createdAt}>{node.createdAt}</p>
+        <p>{node.content.childMarkdownRemark.excerpt}</p>
       </div>
     </div>
   )
@@ -32,9 +30,11 @@ const IndexPage = props => {
   console.log(props)
   return (
     <Layout colorProp="blue">
-      {props.data.allContentfulBlogPost.edges.map(edge => (
-        <BlogPost key={edge.node.id} node={edge.node} />
-      ))}
+      <div className={styles.indexLayout}>
+        {props.data.allContentfulBlogPost.edges.map(edge => (
+          <BlogPost key={edge.node.id} node={edge.node} />
+        ))}
+      </div>
     </Layout>
   )
 }
@@ -45,7 +45,7 @@ export const pageQuery = graphql`
   query pageQuery {
     allContentfulBlogPost(
       filter: { node_locale: { eq: "en-US" } }
-      sort: { fields: [createdAt], order: DESC }
+      sort: { fields: [createdAt], order: ASC }
     ) {
       edges {
         node {
@@ -54,8 +54,8 @@ export const pageQuery = graphql`
           slug
           createdAt(formatString: "MMMM DD, YYYY")
           featuredImage {
-            resolutions(width: 300) {
-              ...GatsbyContentfulResolutions
+            fluid {
+              ...GatsbyContentfulFluid
             }
           }
           content {
