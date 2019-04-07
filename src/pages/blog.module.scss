@@ -2,7 +2,7 @@
   margin: 13rem 9rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 5rem;
+  grid-gap: 5rem;
 }
 
 .postLayout {
@@ -19,7 +19,10 @@
     font-family: "Lato";
     font-weight: 400;
     grid-column: 1 / -1;
-    text-align: center;
+
+    a {
+      color: rgb(85, 26, 139);
+    }
   }
 
   .createdAt {

@@ -3,6 +3,8 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
+import styles from "./blog-post.module.scss"
+
 class BlogPost extends Component {
   render() {
     console.log(this.props)
@@ -14,22 +16,21 @@ class BlogPost extends Component {
     } = this.props.data.contentfulBlogPost
     return (
       <Layout colorProp="blue">
-        <h1
-          style={{
-            borderBottom: "1px solid #ccc",
-            paddingBottom: "0.5rem",
-          }}
-        >
-          {title}
-        </h1>
-        <p>{createdAt}</p>
-        <div style={{ width: "60vw" }}>
-          <Img sizes={featuredImage.sizes} />
-        </div>
-        <hr />
-        <div
-          dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }}
-        />
+        <article className={styles.articleWrapper}>
+          <h1>{title}</h1>
+          <h3>{createdAt}</h3>
+          <div className={styles.featuredImageWrapper}>
+            <Img
+              sizes={featuredImage.sizes}
+              style={{ borderRadius: "0.6rem" }}
+            />
+          </div>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: content.childMarkdownRemark.html,
+            }}
+          />
+        </article>
       </Layout>
     )
   }
