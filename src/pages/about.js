@@ -46,16 +46,32 @@ class About extends React.Component {
         <header className={styles.header}>
           <div className={styles.container}>
             <div className={styles.buttonColumn}>
-              <Button name="intro" onClick={this.handleButtonClick}>
+              <Button
+                active={this.state.componentToRender}
+                name="intro"
+                onClick={this.handleButtonClick}
+              >
                 intro
               </Button>
-              <Button name="coding" onClick={this.handleButtonClick}>
+              <Button
+                active={this.state.componentToRender}
+                name="coding"
+                onClick={this.handleButtonClick}
+              >
                 coding
               </Button>
-              <Button name="tech" onClick={this.handleButtonClick}>
+              <Button
+                active={this.state.componentToRender}
+                name="tech"
+                onClick={this.handleButtonClick}
+              >
                 tech
               </Button>
-              <Button name="interests" onClick={this.handleButtonClick}>
+              <Button
+                active={this.state.componentToRender}
+                name="interests"
+                onClick={this.handleButtonClick}
+              >
                 interests
               </Button>
             </div>
