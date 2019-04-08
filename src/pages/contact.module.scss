@@ -23,7 +23,7 @@
 }
 
 .overlay {
-  background-color: rgba(21, 32, 99, 0.75);
+  background-color: rgba(54, 186, 219, 0.75);
   min-width: 70vw;
   min-height: 26vw;
   padding: 2rem 5rem 6rem 5rem;
@@ -129,7 +129,7 @@
     resize: none;
 
     & + label {
-      visibility: hidden;
+      opacity: 0;
     }
 
     &:focus {
