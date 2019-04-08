@@ -1,6 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import axios from "axios"
 
 import Intro from "../components/AboutComponents/Intro/Intro"
 import Coding from "../components/AboutComponents/Coding/Coding"
@@ -17,7 +18,21 @@ class About extends React.Component {
     super(props)
     this.state = {
       componentToRender: "intro",
+      imageURL: "",
     }
+  }
+
+  componentDidMount() {
+    const url =
+      "https://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list?v=2&key=yeYsYflJgVmwmObQSkvFyQ&id=20537975&shelf=currently-reading"
+
+    axios.get(url).then(res => {
+      const parser = new DOMParser()
+      let xmlDoc = parser.parseFromString(res.data, "text/xml")
+      const imageURL = xmlDoc.getElementsByTagName("image_url")[0].childNodes[0]
+        .nodeValue
+      this.setState({ imageURL: imageURL })
+    })
   }
 
   handleButtonClick = e => {
@@ -32,7 +47,7 @@ class About extends React.Component {
     const { componentToRender } = this.state
 
     if (componentToRender === "interests") {
-      conditionalComponent = <Interests />
+      conditionalComponent = <Interests image={this.state.imageURL} />
     } else if (componentToRender === "coding") {
       conditionalComponent = <Coding />
     } else if (componentToRender === "tech") {
