@@ -1,0 +1,13 @@
+.flexContent {
+  display: flex;
+  justify-content: space-between;
+
+  & > p {
+    flex-basis: 50%;
+    margin-top: 1.9rem;
+  }
+
+  iframe {
+    margin-right: 2.8rem;
+  }
+}

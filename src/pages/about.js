@@ -18,7 +18,8 @@ class About extends React.Component {
     super(props)
     this.state = {
       componentToRender: "intro",
-      imageURL: "",
+      authorName: "",
+      bookTitle: "",
     }
   }
 
@@ -29,9 +30,11 @@ class About extends React.Component {
     axios.get(url).then(res => {
       const parser = new DOMParser()
       let xmlDoc = parser.parseFromString(res.data, "text/xml")
-      const imageURL = xmlDoc.getElementsByTagName("image_url")[0].childNodes[0]
+      const bookTitle = xmlDoc.getElementsByTagName("title")[0].childNodes[0]
         .nodeValue
-      this.setState({ imageURL: imageURL })
+      const authorName = xmlDoc.getElementsByTagName("name")[0].childNodes[0]
+        .nodeValue
+      this.setState({ authorName: authorName, bookTitle: bookTitle })
     })
   }
 
@@ -47,7 +50,12 @@ class About extends React.Component {
     const { componentToRender } = this.state
 
     if (componentToRender === "interests") {
-      conditionalComponent = <Interests image={this.state.imageURL} />
+      conditionalComponent = (
+        <Interests
+          title={this.state.bookTitle}
+          author={this.state.authorName}
+        />
+      )
     } else if (componentToRender === "coding") {
       conditionalComponent = <Coding />
     } else if (componentToRender === "tech") {

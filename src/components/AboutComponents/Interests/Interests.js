@@ -1,4 +1,5 @@
 import React from "react"
+import styles from "./Interests.module.scss"
 
 const Interests = props => {
   return (
@@ -17,7 +18,21 @@ const Interests = props => {
         Otherwise I'm currently improving my drawing and Illustrator and
         Photoshop skills, playing chess online and learning card tricks.
       </p>
-      <img src={props.image} alt="Currently Reading" />
+      <p>
+        Currently reading: {props.title} by {props.author}
+      </p>
+      <div className={styles.flexContent}>
+        <p>
+          Currently learning: Rachmaninoff's Prelude op. 23 no. 5 in G minor
+        </p>
+        <iframe
+          title="Rachmaninoff prelude op. 23 no. 5 in G minor played by Berezovsky"
+          src="https://www.youtube.com/embed/I2GKgFZ_ioQ"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      </div>
     </div>
   )
 }
