@@ -19,7 +19,16 @@ const Interests = props => {
         Photoshop skills, playing chess online and learning card tricks.
       </p>
       <p>
-        Currently reading: {props.title} by {props.author}
+        Currently reading:{" "}
+        <a
+          href={props.link}
+          className={styles.bookLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {props.title}
+        </a>{" "}
+        by {props.author}
       </p>
       <div className={styles.flexContent}>
         <p>

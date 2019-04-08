@@ -20,6 +20,7 @@ class About extends React.Component {
       componentToRender: "intro",
       authorName: "",
       bookTitle: "",
+      bookLink: "",
     }
   }
 
@@ -34,7 +35,13 @@ class About extends React.Component {
         .nodeValue
       const authorName = xmlDoc.getElementsByTagName("name")[0].childNodes[0]
         .nodeValue
-      this.setState({ authorName: authorName, bookTitle: bookTitle })
+      const bookLink = xmlDoc.getElementsByTagName("link")[0].childNodes[0]
+        .nodeValue
+      this.setState({
+        authorName: authorName,
+        bookTitle: bookTitle,
+        bookLink: bookLink,
+      })
     })
   }
 
@@ -54,6 +61,7 @@ class About extends React.Component {
         <Interests
           title={this.state.bookTitle}
           author={this.state.authorName}
+          link={this.state.bookLink}
         />
       )
     } else if (componentToRender === "coding") {
