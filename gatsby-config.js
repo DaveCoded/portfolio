@@ -26,6 +26,10 @@ module.exports = {
             family: `Lato`,
             variants: [`300`, `400`, `700`],
           },
+          {
+            family: `Lora`,
+            variants: [`400`, `400i`, `700`, `700i`],
+          },
         ],
       },
     },
