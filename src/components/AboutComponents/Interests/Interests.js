@@ -20,17 +20,21 @@ const Interests = props => {
         Otherwise I'm currently improving my drawing and Illustrator and
         Photoshop skills, playing chess online and learning card tricks.
       </p>
-      <Goodreads />
-      <div className={styles.piano}>
-        <h3>Currently learning</h3>
-        <p>Rachmaninoff's Prelude op. 23 no. 5 in G minor</p>
-        <iframe
-          title="Rachmaninoff prelude op. 23 no. 5 in G minor played by Berezovsky"
-          src="https://www.youtube.com/embed/I2GKgFZ_ioQ"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        />
+      <div className={styles.contentBox}>
+        <Goodreads />
+        <div className={styles.piano}>
+          <h3>Currently learning</h3>
+          <p>Rachmaninoff's Prelude op. 23 no. 5 in G minor</p>
+          <div>
+            <iframe
+              title="Rachmaninoff prelude op. 23 no. 5 in G minor played by Berezovsky"
+              src="https://www.youtube.com/embed/I2GKgFZ_ioQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -1,0 +1,30 @@
+.contentBox {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+
+  h3 {
+    font-size: 2rem;
+    color: var(--pink);
+    text-align: center;
+  }
+
+  a {
+    color: #4c9edb;
+    transition: all 0.4s;
+
+    &:hover {
+      color: #64d1ce;
+    }
+  }
+
+  img,
+  iframe {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+  }
+}
+
+.piano {
+}
