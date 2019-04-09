@@ -3,7 +3,7 @@ import Goodreads from "./Goodreads"
 
 import styles from "./Interests.module.scss"
 
-const Interests = props => {
+const Interests = () => {
   return (
     <div>
       <p>

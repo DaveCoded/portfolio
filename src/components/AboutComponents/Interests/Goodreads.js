@@ -25,17 +25,14 @@ const GoodReads = () => (
         <div>
           <h3>Currently reading</h3>
           <p>
-            <a
-              href={book.link}
-              // style={{ color: "#64d1ce" }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={book.link} target="_blank" rel="noopener noreferrer">
               {book.title}
             </a>{" "}
             by {book.authors[0].name}
           </p>
-          <img src={book.image_url} alt="Currently reading" />
+          <a href={book.link} target="_blank" rel="noopener noreferrer">
+            <img src={book.image_url} alt="Currently reading" />
+          </a>
         </div>
       )
     }}
