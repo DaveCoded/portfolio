@@ -29,5 +29,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: "@jamesdanylik/gatsby-source-goodreads",
+      options: {
+        key: "yeYsYflJgVmwmObQSkvFyQ",
+        id: "20537975",
+      },
+    },
   ],
 }

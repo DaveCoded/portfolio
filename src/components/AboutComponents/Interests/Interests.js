@@ -1,4 +1,6 @@
 import React from "react"
+import Goodreads from "./Goodreads"
+
 import styles from "./Interests.module.scss"
 
 const Interests = props => {
@@ -18,22 +20,10 @@ const Interests = props => {
         Otherwise I'm currently improving my drawing and Illustrator and
         Photoshop skills, playing chess online and learning card tricks.
       </p>
-      <p>
-        Currently reading:{" "}
-        <a
-          href={props.link}
-          className={styles.bookLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {props.title}
-        </a>{" "}
-        by {props.author}
-      </p>
-      <div className={styles.flexContent}>
-        <p>
-          Currently learning: Rachmaninoff's Prelude op. 23 no. 5 in G minor
-        </p>
+      <Goodreads />
+      <div className={styles.piano}>
+        <h3>Currently learning</h3>
+        <p>Rachmaninoff's Prelude op. 23 no. 5 in G minor</p>
         <iframe
           title="Rachmaninoff prelude op. 23 no. 5 in G minor played by Berezovsky"
           src="https://www.youtube.com/embed/I2GKgFZ_ioQ"
