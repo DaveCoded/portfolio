@@ -9,20 +9,18 @@ import styles from "./blog.module.scss"
 
 const BlogPost = ({ node }) => {
   return (
-    <div className={styles.postLayout}>
-      <h3>
-        <Link to={`blog/${node.slug}`}>{node.title}</Link>
-      </h3>
-      <div className={styles.featuredImage}>
-        <Link to={`blog/${node.slug}`}>
+    <Link to={`blog/${node.slug}`}>
+      <div className={styles.postLayout}>
+        <h3>{node.title}</h3>
+        <div className={styles.featuredImage}>
           <Img fluid={node.featuredImage.fluid} />
-        </Link>
+        </div>
+        <div className={styles.contentBox}>
+          <p className={styles.createdAt}>{node.createdAt}</p>
+          <p>{node.content.childMarkdownRemark.excerpt}</p>
+        </div>
       </div>
-      <div className={styles.contentBox}>
-        <p className={styles.createdAt}>{node.createdAt}</p>
-        <p>{node.content.childMarkdownRemark.excerpt}</p>
-      </div>
-    </div>
+    </Link>
   )
 }
 

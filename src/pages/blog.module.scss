@@ -1,24 +1,34 @@
 .indexLayout {
-  margin: 13rem 9rem;
+  margin: 13rem 10rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 5rem;
+  grid-gap: 4rem;
 }
 
 .postLayout {
-  border: 1px solid #ccc;
+  height: 100%;
+  border: 3px solid var(--pink);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
   display: grid;
   grid-template-columns: 16rem 1fr;
   grid-template-rows: max-content 1fr;
-  grid-column-gap: 4rem;
+  grid-column-gap: 3rem;
   padding: 2rem;
+  transition: all 0.25s ease-out;
+
+  &:hover {
+    transform: translatey(3px);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
 
   h3 {
     font-size: 2.7rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-family: "Lato";
     font-weight: 400;
     grid-column: 1 / -1;
+    text-align: center;
 
     a {
       color: rgb(85, 26, 139);
@@ -35,14 +45,18 @@
     font-size: 2rem;
     color: #152063;
   }
+}
 
-  & > div > a > div {
+.featuredImage {
+  border: 2px solid #555;
+  border-radius: 5px;
+  overflow: hidden;
+
+  & > div {
     height: 100%;
   }
 }
 
-.featuredImage {
-}
-
 .contentBox {
+  align-self: center;
 }
