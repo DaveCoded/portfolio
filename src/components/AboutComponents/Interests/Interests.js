@@ -22,7 +22,7 @@ const Interests = props => {
       </p>
       <div className={styles.contentBox}>
         <Goodreads />
-        <div className={styles.piano}>
+        <div>
           <h3>Currently learning</h3>
           <p>Rachmaninoff's Prelude op. 23 no. 5 in G minor</p>
           <div>
