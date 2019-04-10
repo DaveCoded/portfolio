@@ -1,7 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-import { CSSTransition, TransitionGroup } from "react-transition-group"
 
 import Layout from "../components/layout"
 import Button from "../components/Button/Button"
@@ -60,15 +59,9 @@ class About extends React.Component {
               </Button>
             </div>
 
-            <TransitionGroup className={styles.contentBox}>
-              <CSSTransition
-                key={this.state.componentToRender}
-                classNames="fade"
-                timeout={1000}
-              >
-                <AboutConditional conditional={this.state.componentToRender} />
-              </CSSTransition>
-            </TransitionGroup>
+            <div className={styles.contentBox}>
+              <AboutConditional conditional={this.state.componentToRender} />
+            </div>
           </div>
           <SocialBar />
         </header>
