@@ -1,4 +1,11 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+
 .image {
+  margin-right: 4.2rem;
   width: 37%;
 
   img {

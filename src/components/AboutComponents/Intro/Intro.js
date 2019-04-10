@@ -5,7 +5,7 @@ import { graphql, StaticQuery } from "gatsby"
 import styles from "./Intro.module.scss"
 
 const Intro = () => (
-  <React.Fragment>
+  <div className={styles.wrapper}>
     <div className={styles.text}>
       <p>
         Hi. Thank you for coming to check out my portfolio. It leverages the
@@ -41,7 +41,7 @@ const Intro = () => (
         </div>
       )}
     />
-  </React.Fragment>
+  </div>
 )
 
 export default Intro

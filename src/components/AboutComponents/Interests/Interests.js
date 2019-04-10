@@ -5,7 +5,7 @@ import styles from "./Interests.module.scss"
 
 const Interests = () => {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <p>
         I'm interested in far too many things, so end up keeping various hobbies
         on an <em>ad hoc</em> rotation. I always have a good book on the go, and
