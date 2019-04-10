@@ -1,16 +1,13 @@
 import React from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-
-import Intro from "../components/AboutComponents/Intro/Intro"
-import Coding from "../components/AboutComponents/Coding/Coding"
-import Tech from "../components/AboutComponents/Tech/Tech"
-import Interests from "../components/AboutComponents/Interests/Interests"
+import { CSSTransition, TransitionGroup } from "react-transition-group"
 
 import Layout from "../components/layout"
 import Button from "../components/Button/Button"
 import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./about.module.scss"
+import AboutConditional from "../components/AboutConditional/AboutConditional"
 
 class About extends React.Component {
   constructor(props) {
@@ -28,19 +25,6 @@ class About extends React.Component {
   }
 
   render() {
-    let conditionalComponent = <Intro />
-    const { componentToRender } = this.state
-
-    if (componentToRender === "interests") {
-      conditionalComponent = <Interests />
-    } else if (componentToRender === "coding") {
-      conditionalComponent = <Coding />
-    } else if (componentToRender === "tech") {
-      conditionalComponent = <Tech />
-    } else {
-      conditionalComponent = <Intro />
-    }
-
     return (
       <Layout colorProp="blue">
         <header className={styles.header}>
@@ -75,7 +59,16 @@ class About extends React.Component {
                 interests
               </Button>
             </div>
-            <div className={styles.contentBox}>{conditionalComponent}</div>
+
+            <TransitionGroup className={styles.contentBox}>
+              <CSSTransition
+                key={this.state.componentToRender}
+                classNames="fade"
+                timeout={1000}
+              >
+                <AboutConditional conditional={this.state.componentToRender} />
+              </CSSTransition>
+            </TransitionGroup>
           </div>
           <SocialBar />
         </header>
