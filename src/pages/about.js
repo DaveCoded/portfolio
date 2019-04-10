@@ -1,7 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-import axios from "axios"
 
 import Intro from "../components/AboutComponents/Intro/Intro"
 import Coding from "../components/AboutComponents/Coding/Coding"
@@ -18,31 +17,7 @@ class About extends React.Component {
     super(props)
     this.state = {
       componentToRender: "intro",
-      authorName: "",
-      bookTitle: "",
-      bookLink: "",
     }
-  }
-
-  componentDidMount() {
-    const url =
-      "https://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list?v=2&key=yeYsYflJgVmwmObQSkvFyQ&id=20537975&shelf=currently-reading"
-
-    axios.get(url).then(res => {
-      const parser = new DOMParser()
-      let xmlDoc = parser.parseFromString(res.data, "text/xml")
-      const bookTitle = xmlDoc.getElementsByTagName("title")[0].childNodes[0]
-        .nodeValue
-      const authorName = xmlDoc.getElementsByTagName("name")[0].childNodes[0]
-        .nodeValue
-      const bookLink = xmlDoc.getElementsByTagName("link")[0].childNodes[0]
-        .nodeValue
-      this.setState({
-        authorName: authorName,
-        bookTitle: bookTitle,
-        bookLink: bookLink,
-      })
-    })
   }
 
   handleButtonClick = e => {
@@ -57,13 +32,7 @@ class About extends React.Component {
     const { componentToRender } = this.state
 
     if (componentToRender === "interests") {
-      conditionalComponent = (
-        <Interests
-          title={this.state.bookTitle}
-          author={this.state.authorName}
-          link={this.state.bookLink}
-        />
-      )
+      conditionalComponent = <Interests />
     } else if (componentToRender === "coding") {
       conditionalComponent = <Coding />
     } else if (componentToRender === "tech") {
