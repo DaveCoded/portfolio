@@ -2,7 +2,7 @@
   height: 100vh;
 }
 
-h2 {
+.animate {
   position: absolute;
   bottom: 7.5rem;
   left: 23.3rem;
@@ -11,13 +11,17 @@ h2 {
   font-family: "Lato";
   font-weight: 300;
   opacity: 0;
-}
-
-.animate {
   animation: fade-in 1s ease 500ms forwards;
 }
 
 .loaded {
+  position: absolute;
+  bottom: 7.5rem;
+  left: 23.3rem;
+  color: #eb3484;
+  font-size: 4rem;
+  font-family: "Lato";
+  font-weight: 300;
   opacity: 1;
 }
 
