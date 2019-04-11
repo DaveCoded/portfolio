@@ -5,10 +5,7 @@ import styles from "./Button.module.scss"
 const Button = props => (
   <button
     style={{
-      backgroundColor:
-        props.active === props.name
-          ? "rgb(235, 52, 132)"
-          : "rgba(235, 52, 132, 0.44)",
+      backgroundColor: props.active === props.name ? "rgb(235, 52, 132)" : null,
     }}
     className={styles.Button}
     name={props.name}

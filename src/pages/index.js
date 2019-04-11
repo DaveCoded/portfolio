@@ -8,7 +8,9 @@ import styles from "./index.module.scss"
 class HomePage extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      textClass: null,
+    }
   }
 
   render() {
@@ -20,26 +22,26 @@ class HomePage extends Component {
           fluid={this.props.data.background.childImageSharp.fluid}
         >
           <h1 hidden>Dave</h1>
-          <h2>Front-end Web Developer</h2>
+          <h2 className={this.state.textClass}>Front-end Web Developer</h2>
         </BackgroundImage>
       </Layout>
     )
   }
 
-  // Only animate the h1 on first page load
+  // Only animate the h2 on first page load
 
-  /* componentDidMount() {
+  componentDidMount() {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
       this.setState({
-        // Set CSS class?
+        textClass: styles.animate,
       })
       window.sessionStorage.setItem("firstLoadDone", 1)
     } else {
       this.setState({
-        // eg Remove CSS class
+        textClass: styles.loaded,
       })
     }
-  } */
+  }
 }
 
 export default HomePage

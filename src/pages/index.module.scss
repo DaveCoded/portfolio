@@ -1,17 +1,31 @@
 .background {
   height: 100vh;
+}
 
-  // &:before {
-  //   background-position: 0px 70%;
-  // }
+h2 {
+  position: absolute;
+  bottom: 7.5rem;
+  left: 23.3rem;
+  color: #eb3484;
+  font-size: 4rem;
+  font-family: "Lato";
+  font-weight: 300;
+  opacity: 0;
+}
 
-  h2 {
-    position: absolute;
-    bottom: 7.5rem;
-    left: 23.3rem;
-    color: #eb3484;
-    font-size: 4rem;
-    font-family: "Lato";
-    font-weight: 300;
+.animate {
+  animation: fade-in 1s ease 500ms forwards;
+}
+
+.loaded {
+  opacity: 1;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
