@@ -31,6 +31,8 @@ export const pageQuery = graphql`
           title
           slug
           link
+          description
+          tech
           createdAt(formatString: "MMMM DD, YYYY")
           featuredImage {
             fluid(maxWidth: 600) {
