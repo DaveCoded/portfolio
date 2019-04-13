@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
+import PageTransition from "gatsby-plugin-page-transitions"
+
 import Layout from "../components/layout"
 import SocialBar from "../components/SocialBar/social-bar"
 import BackgroundImage from "gatsby-background-image"
@@ -15,16 +17,18 @@ class HomePage extends Component {
 
   render() {
     return (
-      <Layout>
-        <SocialBar />
-        <BackgroundImage
-          className={styles.background}
-          fluid={this.props.data.background.childImageSharp.fluid}
-        >
-          <h1 hidden>Dave</h1>
-          <h2 className={this.state.textClass}>Front-end Web Developer</h2>
-        </BackgroundImage>
-      </Layout>
+      <PageTransition>
+        <Layout>
+          <SocialBar />
+          <BackgroundImage
+            className={styles.background}
+            fluid={this.props.data.background.childImageSharp.fluid}
+          >
+            <h1 hidden>Dave</h1>
+            <h2 className={this.state.textClass}>Front-end Web Developer</h2>
+          </BackgroundImage>
+        </Layout>
+      </PageTransition>
     )
   }
 
