@@ -40,5 +40,6 @@ module.exports = {
         id: "20537975",
       },
     },
+    "gatsby-plugin-page-transitions",
   ],
 }
