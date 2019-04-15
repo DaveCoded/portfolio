@@ -3,7 +3,6 @@ import { navigateTo } from "gatsby-link"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from "../components/layout"
 import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./contact.module.scss"
 
@@ -40,7 +39,7 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <Layout colorProp="blue">
+      <>
         <Img
           fluid={this.props.data.bubbles.childImageSharp.fluid}
           className={styles.background}
@@ -100,7 +99,7 @@ export default class Contact extends React.Component {
             <SocialBar />
           </div>
         </div>
-      </Layout>
+      </>
     )
   }
 }

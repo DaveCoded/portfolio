@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
 import SocialBar from "../components/SocialBar/social-bar"
 import BackgroundImage from "gatsby-background-image"
 import styles from "./index.module.scss"
@@ -15,7 +14,7 @@ class HomePage extends Component {
 
   render() {
     return (
-      <Layout>
+      <>
         <SocialBar />
         <BackgroundImage
           className={styles.background}
@@ -24,7 +23,7 @@ class HomePage extends Component {
           <h1 hidden>Dave</h1>
           <h2 className={this.state.textClass}>Front-end Web Developer</h2>
         </BackgroundImage>
-      </Layout>
+      </>
     )
   }
 

@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import Link from "gatsby-link"
 import Img from "gatsby-image"
-import Layout from "../components/layout"
 
 import styles from "./blog.module.scss"
 
@@ -27,13 +26,13 @@ const BlogPost = ({ node }) => {
 const IndexPage = props => {
   console.log(props)
   return (
-    <Layout colorProp="blue">
-      <div className={styles.indexLayout}>
-        {props.data.allContentfulBlogPost.edges.map(edge => (
-          <BlogPost key={edge.node.id} node={edge.node} />
-        ))}
-      </div>
-    </Layout>
+    // <Layout colorProp="blue">
+    <div className={styles.indexLayout}>
+      {props.data.allContentfulBlogPost.edges.map(edge => (
+        <BlogPost key={edge.node.id} node={edge.node} />
+      ))}
+    </div>
+    // </Layout>
   )
 }
 
