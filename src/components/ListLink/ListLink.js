@@ -1,9 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const ListLink = props => (
   <li>
-    <Link
+    <AniLink
+      fade
       to={props.to}
       activeStyle={{
         borderBottom: "2px solid #eb3484",
@@ -11,7 +12,7 @@ const ListLink = props => (
       }}
     >
       {props.children}
-    </Link>
+    </AniLink>
   </li>
 )
 
