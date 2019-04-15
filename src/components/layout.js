@@ -1,9 +1,8 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import styles from "./layout.module.scss"
-
 import ListLink from "./ListLink/ListLink"
-
 import cv from "../assets/documents/CV.pdf"
 
 class Layout extends Component {
@@ -26,15 +25,16 @@ class Layout extends Component {
     return (
       <div className={styles.layout}>
         <nav style={{ backgroundColor: "rgb(21, 32, 99)" }} id="navbar">
-          <Link
+          <AniLink
             className={styles.homeLink}
+            fade
             to="/"
             activeStyle={{
               display: "none",
             }}
           >
             home
-          </Link>
+          </AniLink>
           <ul className="nav-link">
             <ListLink to="/about/">about</ListLink>
             <ListLink to="/projects/">projects</ListLink>
