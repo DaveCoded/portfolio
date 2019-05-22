@@ -1,7 +1,7 @@
 import React from "react"
 
 const Tech = () => (
-  <div style={{ position: "absolute", marginRight: "4.2rem" }}>
+  <div style={{ position: "absolute", marginRight: "4.2rem", padding: "2rem" }}>
     <h3
       style={{
         marginBottom: "3rem",

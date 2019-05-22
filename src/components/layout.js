@@ -1,9 +1,8 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import styles from "./layout.module.scss"
-
 import ListLink from "./ListLink/ListLink"
-
 import cv from "../assets/documents/CV.pdf"
 
 class Layout extends Component {
@@ -22,23 +21,20 @@ class Layout extends Component {
 
   render() {
     let year = new Date().getFullYear()
-    let navColor = ""
-    if (this.props.colorProp === "blue") {
-      navColor = "rgb(21, 32, 99)"
-    }
 
     return (
       <div className={styles.layout}>
-        <nav style={{ backgroundColor: navColor }} id="navbar">
-          <Link
+        <nav style={{ backgroundColor: "rgb(21, 32, 99)" }} id="navbar">
+          <AniLink
             className={styles.homeLink}
+            fade
             to="/"
             activeStyle={{
               display: "none",
             }}
           >
             home
-          </Link>
+          </AniLink>
           <ul className="nav-link">
             <ListLink to="/about/">about</ListLink>
             <ListLink to="/projects/">projects</ListLink>

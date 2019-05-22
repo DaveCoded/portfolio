@@ -1,21 +1,20 @@
 .codingDiv {
   position: absolute;
   margin-right: 4.2rem;
+  padding: 2rem;
 
   h3 {
     margin-bottom: 3rem;
     font-size: 3rem;
-    color: var(--pink);
     text-align: center;
   }
 
   .heading {
-    font-size: 2.2rem;
+    font-size: 3rem;
     margin-top: 4rem;
     text-align: center;
     color: var(--dark-grey);
-    text-transform: uppercase;
-    font-family: "Neutra Text Light";
+    font-family: "Neutra Text";
 
     span {
       color: var(--pink);

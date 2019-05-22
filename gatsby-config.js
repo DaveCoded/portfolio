@@ -19,6 +19,12 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-remark",
     {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        layout: require.resolve(`./src/components/layout.js`),
+      },
+    },
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
