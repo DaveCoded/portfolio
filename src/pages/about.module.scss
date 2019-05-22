@@ -1,8 +1,12 @@
+.header {
+  position: relative;
+}
+
 .container {
   padding: 13rem 17rem;
   min-height: 70vh;
   display: flex;
-  background-color: #e5f8e5;
+  background-color: var(--blue-white);
 }
 
 .buttonColumn {
@@ -93,7 +97,7 @@
 
 .betterWeb {
   min-height: 90vh;
-  background: linear-gradient(to bottom right, #64d1ce, #4c9edb);
+  background-color: var(--blue-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
