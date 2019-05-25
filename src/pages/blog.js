@@ -24,7 +24,6 @@ const BlogPost = ({ node }) => {
 }
 
 const IndexPage = props => {
-  console.log(props)
   return (
     // <Layout colorProp="blue">
     <div className={styles.indexLayout}>
