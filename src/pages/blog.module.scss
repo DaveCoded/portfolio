@@ -1,26 +1,23 @@
 .indexLayout {
-  padding: 12rem 30rem;
+  padding: 12rem 32rem;
   display: flex;
   flex-direction: column;
   position: relative;
   top: 0;
   left: 0;
   overflow: hidden;
-  background-color: var(--blue-white);
 }
 
 .postLayout {
-  height: 100%;
-  margin: 0 auto;
-  background: #fff;
+  height: 16.5rem;
+  background-color: #edf2f2;
   border: 1px solid var(--dark-grey);
   border-radius: 5px;
   box-shadow: var(--box-shadow);
   display: grid;
-  grid-template-columns: 16rem 1fr;
+  grid-template-columns: 22rem 1fr 2rem;
   grid-template-rows: max-content 1fr;
   grid-column-gap: 3rem;
-  padding: 2rem;
   margin-bottom: 3rem;
   transition: all 0.25s ease-out;
 
@@ -33,9 +30,12 @@
     color: var(--dark-grey);
     font-size: 2.7rem;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     font-family: "Lora";
     font-weight: 700;
+    font-style: italic;
     grid-column: 2;
+    display: inline;
 
     a {
       color: rgb(85, 26, 139);
@@ -45,25 +45,23 @@
   .createdAt {
     font-size: 1.8rem;
     color: #777;
-    margin-bottom: 1rem;
+    float: right;
+    margin-top: 0.7rem;
   }
 
   p {
     font-size: 2rem;
     color: #152063;
+    margin-top: 1.6rem;
   }
 }
 
 .featuredImage {
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
   overflow: hidden;
   grid-row: 1 / -1;
 
   & > div {
     height: 100%;
   }
-}
-
-.contentBox {
-  align-self: center;
 }

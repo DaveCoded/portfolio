@@ -11,14 +11,24 @@ const BlogPost = ({ node }) => {
   return (
     <Link to={`blog/${node.slug}`}>
       <article className={styles.postLayout}>
-        <h3>{node.title}</h3>
         <div className={styles.featuredImage}>
           <Img fluid={node.featuredImage.fluid} />
         </div>
-        <div className={styles.contentBox}>
-          <p className={styles.createdAt}>{node.createdAt}</p>
+        <div style={{ paddingTop: "2rem" }}>
+          <h3>{node.title}</h3>
+          <span className={styles.createdAt}>{node.createdAt}</span>
           <p>{node.content.childMarkdownRemark.excerpt}</p>
         </div>
+        <div
+          style={{
+            backgroundColor: "#F0DB4E",
+            width: "2rem",
+            height: "100%",
+            gridRow: "1 / -1",
+            gridColumn: "3",
+            borderRadius: "0 5px 5px 0",
+          }}
+        />
       </article>
     </Link>
   )
@@ -33,10 +43,9 @@ const IndexPage = props => {
         style={{
           fontSize: "2.3rem",
           marginBottom: "3rem",
-          fontStyle: "italic",
         }}
       >
-        Things I've learned and some things that I've thunk.
+        Writings and learnings about tech and other things.
       </p>
       {props.data.allContentfulBlogPost.edges.map(edge => (
         <BlogPost key={edge.node.id} node={edge.node} />
