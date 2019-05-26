@@ -11,7 +11,7 @@
 .postLayout {
   height: 16.5rem;
   background-color: #edf2f2;
-  border: 1px solid var(--dark-grey);
+  border: 1px solid #707070;
   border-radius: 5px;
   box-shadow: var(--box-shadow);
   display: grid;
@@ -21,16 +21,10 @@
   margin-bottom: 3rem;
   transition: all 0.25s ease-out;
 
-  &:hover {
-    transform: translatey(1px);
-    box-shadow: 2px 2px 1rem rgba(0, 0, 0, 0.4);
-  }
-
   h3 {
     color: var(--dark-grey);
     font-size: 2.7rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0;
     font-family: "Lora";
     font-weight: 700;
     font-style: italic;
