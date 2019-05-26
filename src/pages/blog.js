@@ -14,7 +14,6 @@ const BlogPost = ({ node }) => {
     <Link to={`blog/${node.slug}`}>
       <article className={styles.postLayout}>
         <div className={styles.featuredImage}>
-          {/* REPLACE THIS WITH A CONDITIONALLY RENDERED COMPONENT */}
           <CategoryImage subject={node.category} />
           <Img fluid={node.featuredImage.fluid} />
         </div>
