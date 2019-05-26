@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Link from "gatsby-link"
 import Img from "gatsby-image"
 import SocialBar from "../components/SocialBar/social-bar"
+import CategoryImage from "../components/BlogComponents/CategoryImage"
 import CategoryDiv from "../components/BlogComponents/CategoryDiv"
 
 import styles from "./blog.module.scss"
@@ -14,6 +15,7 @@ const BlogPost = ({ node }) => {
       <article className={styles.postLayout}>
         <div className={styles.featuredImage}>
           {/* REPLACE THIS WITH A CONDITIONALLY RENDERED COMPONENT */}
+          <CategoryImage subject={node.category} />
           <Img fluid={node.featuredImage.fluid} />
         </div>
         <div style={{ paddingTop: "2rem" }}>
@@ -21,7 +23,6 @@ const BlogPost = ({ node }) => {
           <span className={styles.createdAt}>{node.createdAt}</span>
           <p>{node.content.childMarkdownRemark.excerpt}</p>
         </div>
-        {/* REPLACE THIS WITH A CONDITIONALLY RENDERED COMPONENT */}
         <CategoryDiv subject={node.category} />
       </article>
     </Link>
