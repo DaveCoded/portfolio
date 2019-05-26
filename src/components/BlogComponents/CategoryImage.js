@@ -2,11 +2,25 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const CategoryImage = () => (
+const CategoryImage = props => (
   <StaticQuery
     query={graphql`
       query {
-        image: file(relativePath: { eq: "Blog-images/developer.png" }) {
+        developer: file(relativePath: { eq: "Blog-images/developer.png" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        javascript: file(relativePath: { eq: "Blog-images/js-logo.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        react: file(relativePath: { eq: "Blog-images/react-logo.png" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -16,7 +30,15 @@ const CategoryImage = () => (
       }
     `}
     render={data => {
-      return <Img fluid={data.image.childImageSharp.fluid} />
+      let variable
+      if (props.subject === "other") {
+        variable = data.developer.childImageSharp.fluid
+      } else if (props.subject === "javascript") {
+        variable = data.javascript.childImageSharp.fluid
+      } else {
+        variable = data.react.childImageSharp.fluid
+      }
+      return <Img fluid={variable} />
     }}
   />
 )
