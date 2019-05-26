@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Link from "gatsby-link"
 import Img from "gatsby-image"
 import SocialBar from "../components/SocialBar/social-bar"
+import CategoryDiv from "../components/BlogComponents/CategoryDiv"
 
 import styles from "./blog.module.scss"
 
@@ -12,6 +13,7 @@ const BlogPost = ({ node }) => {
     <Link to={`blog/${node.slug}`}>
       <article className={styles.postLayout}>
         <div className={styles.featuredImage}>
+          {/* REPLACE THIS WITH A CONDITIONALLY RENDERED COMPONENT */}
           <Img fluid={node.featuredImage.fluid} />
         </div>
         <div style={{ paddingTop: "2rem" }}>
@@ -19,16 +21,8 @@ const BlogPost = ({ node }) => {
           <span className={styles.createdAt}>{node.createdAt}</span>
           <p>{node.content.childMarkdownRemark.excerpt}</p>
         </div>
-        <div
-          style={{
-            backgroundColor: "#F0DB4E",
-            width: "2rem",
-            height: "100%",
-            gridRow: "1 / -1",
-            gridColumn: "3",
-            borderRadius: "0 5px 5px 0",
-          }}
-        />
+        {/* REPLACE THIS WITH A CONDITIONALLY RENDERED COMPONENT */}
+        <CategoryDiv subject={node.category} />
       </article>
     </Link>
   )
@@ -67,6 +61,7 @@ export const pageQuery = graphql`
         node {
           id
           title
+          category
           slug
           createdAt(formatString: "MMMM DD, YYYY")
           featuredImage {
