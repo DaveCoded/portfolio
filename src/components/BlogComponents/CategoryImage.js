@@ -6,6 +6,20 @@ const CategoryImage = props => (
   <StaticQuery
     query={graphql`
       query {
+        css: file(relativePath: { eq: "Blog-images/css-logo.png" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        gatsby: file(relativePath: { eq: "Blog-images/gatsby.png" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         developer: file(relativePath: { eq: "Blog-images/developer.png" }) {
           childImageSharp {
             fluid {
@@ -13,7 +27,7 @@ const CategoryImage = props => (
             }
           }
         }
-        javascript: file(relativePath: { eq: "Blog-images/js-logo.jpg" }) {
+        javascript: file(relativePath: { eq: "Blog-images/javascript.jpg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -27,18 +41,31 @@ const CategoryImage = props => (
             }
           }
         }
+        opinion: file(relativePath: { eq: "Blog-images/opinion.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `}
     render={data => {
-      let variable
-      if (props.subject === "other") {
-        variable = data.developer.childImageSharp.fluid
+      let conditionalImage
+      if (props.subject === "react") {
+        conditionalImage = data.react.childImageSharp.fluid
+      } else if (props.subject === "css") {
+        conditionalImage = data.css.childImageSharp.fluid
       } else if (props.subject === "javascript") {
-        variable = data.javascript.childImageSharp.fluid
+        conditionalImage = data.javascript.childImageSharp.fluid
+      } else if (props.subject === "gatsby") {
+        conditionalImage = data.gatsby.childImageSharp.fluid
+      } else if (props.subject === "opinion") {
+        conditionalImage = data.opinion.childImageSharp.fluid
       } else {
-        variable = data.react.childImageSharp.fluid
+        conditionalImage = data.developer.childImageSharp.fluid
       }
-      return <Img fluid={variable} />
+      return <Img fluid={conditionalImage} />
     }}
   />
 )
