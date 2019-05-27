@@ -65,7 +65,7 @@ const CategoryImage = props => (
       } else {
         conditionalImage = data.developer.childImageSharp.fluid
       }
-      return <Img fluid={conditionalImage} />
+      return <Img style={{ height: "100%" }} fluid={conditionalImage} />
     }}
   />
 )
