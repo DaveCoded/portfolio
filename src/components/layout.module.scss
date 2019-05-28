@@ -4,8 +4,8 @@
     top: 0;
     left: 0;
     width: 100%;
+    padding: 0 6.2rem;
     z-index: 500;
-    padding: 1rem 6.2rem 0;
     background-color: var(--color-primary);
     transition: top 0.3s;
     height: 5.2rem;
@@ -16,16 +16,27 @@
     display: flex;
     justify-content: space-between;
     width: 32%;
+    height: 100%;
     margin-right: 3rem;
     font-size: 2.1rem;
     font-family: "Neutra Text";
 
+    li {
+      height: 100%;
+    }
+
     li a {
+      height: 100%;
+      padding: 1rem 2.1rem;
+      transition: 0.3s;
       transition: all 0.3s;
     }
 
-    li:hover a {
-      color: var(--blue);
+    li:hover {
+      a {
+        color: var(--blue);
+        background-color: #944781;
+      }
     }
   }
   footer {
@@ -44,6 +55,9 @@
   }
 }
 .homeLink {
+  display: inline-block;
+  height: 100%;
+  padding: 1rem 1.5rem;
   color: white;
   font-size: 2.2rem;
   font-family: "Neutra Text", sans-serif;
@@ -51,5 +65,6 @@
 
   &:hover {
     color: var(--blue);
+    background-color: #944781;
   }
 }

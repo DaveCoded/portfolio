@@ -26,14 +26,13 @@ class Layout extends Component {
       <div className={styles.layout}>
         <nav id="navbar">
           <AniLink
-            className={styles.homeLink}
             fade
             to="/"
             activeStyle={{
               display: "none",
             }}
           >
-            home
+            <li className={styles.homeLink}>home</li>
           </AniLink>
           <ul className="nav-link">
             <ListLink to="/about/">about</ListLink>
