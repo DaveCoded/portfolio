@@ -10,16 +10,6 @@
     width: 30%;
     margin: 0 auto;
 
-    /* label {
-      font-size: 2rem;
-      color: #fff;
-      display: block;
-      transition: all 0.3s;
-      font-family: "Neutra Text Light";
-      margin-left: 1.9rem;
-      margin-top: 0.5rem;
-    } */
-
     button {
       &,
       &:link,
@@ -32,6 +22,7 @@
         color: white;
         font-family: inherit;
         font-size: 2rem;
+        transition: 0.3s;
         cursor: pointer;
 
         &:hover {
