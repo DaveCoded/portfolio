@@ -1,16 +1,16 @@
 .Background {
   width: 100%;
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding-top: 14rem;
 
   form {
-    grid-column: 2;
     background-color: #edf2f2;
     padding: 4rem;
     border-radius: 5px;
+    width: 30%;
+    margin: 0 auto;
 
-    label {
+    /* label {
       font-size: 2rem;
       color: #fff;
       display: block;
@@ -18,27 +18,28 @@
       font-family: "Neutra Text Light";
       margin-left: 1.9rem;
       margin-top: 0.5rem;
-    }
+    } */
 
     button {
       &,
       &:link,
       &:visited {
-        background-color: var(--pink);
-        padding: 1rem 4.8rem;
+        background-color: #974982;
+        padding: 0.8rem 4.8rem;
+        width: 100%;
         border: solid 2px transparent;
         border-radius: 0.6rem;
         color: white;
         font-family: inherit;
-        font-size: 2.4rem;
+        font-size: 2rem;
         cursor: pointer;
 
         &:hover {
-          background-color: var(--light-pink);
+          background-color: var(--pink);
         }
 
         &:focus {
-          background-color: var(--light-pink);
+          background-color: var(--pink);
           outline: none;
           border-color: var(--orange);
         }
@@ -48,11 +49,19 @@
 }
 
 .Input {
-  grid-column: 2;
+  margin-bottom: 1.5rem;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    border: 1px solid green;
+    -webkit-text-fill-color: green;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 
   input {
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: inherit;
     color: inherit;
     padding: 1rem 2rem;
@@ -60,12 +69,6 @@
     background-color: rgba(255, 255, 255, 0.9);
     border: none;
     border-bottom: 3px solid transparent;
-
-    &:placeholder-shown + label {
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-4rem);
-    }
 
     &:focus {
       outline: none;
@@ -76,17 +79,23 @@
     &:focus:invalid {
       border-bottom: 3px solid #ff7730;
     }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      border: 1px solid green;
+      -webkit-text-fill-color: green;
+      transition: background-color 5000s ease-in-out 0s;
+    }
   }
 }
 
 .Textarea {
-  grid-row: 1 / -1;
-  grid-column: 1;
-
   textarea {
     min-width: 100%;
-    min-height: 100%;
-    font-size: 2rem;
+    min-height: 20rem;
+    margin-bottom: 2.4rem;
+    font-size: 1.8rem;
     font-family: inherit;
     color: inherit;
     padding: 1rem 2rem;
@@ -95,20 +104,10 @@
     border: solid 1px transparent;
     resize: none;
 
-    & + label {
-      opacity: 0;
-    }
-
     &:focus {
       outline: none;
-      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
-      border-color: var(--orange);
+      box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+      border-color: green;
     }
   }
-}
-
-.buttonP {
-  grid-column: 2;
-  align-self: end;
-  justify-self: center;
 }

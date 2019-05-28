@@ -62,7 +62,9 @@ export default class Contact extends React.Component {
               onChange={this.handleChange}
               required
             />
-            <label htmlFor="name">Your name</label>
+            <label className="visually-hidden" htmlFor="name">
+              Your name
+            </label>
           </p>
           <p className={styles.Input}>
             <input
@@ -72,7 +74,9 @@ export default class Contact extends React.Component {
               onChange={this.handleChange}
               required
             />
-            <label htmlFor="email">Your email</label>
+            <label className="visually-hidden" htmlFor="email">
+              Your email
+            </label>
           </p>
           <p className={styles.Textarea}>
             <textarea
@@ -81,7 +85,9 @@ export default class Contact extends React.Component {
               onChange={this.handleChange}
               required
             />
-            <label htmlFor-="message">Message</label>
+            <label className="visually-hidden" htmlFor-="message">
+              Message
+            </label>
           </p>
           <p className={styles.buttonP}>
             <button type="submit">Send</button>
