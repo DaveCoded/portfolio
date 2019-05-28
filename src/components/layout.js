@@ -24,7 +24,7 @@ class Layout extends Component {
 
     return (
       <div className={styles.layout}>
-        <nav style={{ backgroundColor: "rgb(21, 32, 99)" }} id="navbar">
+        <nav id="navbar">
           <AniLink
             className={styles.homeLink}
             fade
