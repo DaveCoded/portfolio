@@ -7,7 +7,7 @@ const ListLink = props => (
       fade
       to={props.to}
       activeStyle={{
-        borderBottom: "2px solid #eb3484",
+        borderBottom: "2px solid #fff",
         paddingBottom: "5px",
       }}
     >
