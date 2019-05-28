@@ -1,10 +1,10 @@
 .socialBar {
   width: 0;
   height: 35rem;
-  border-right: 7.2rem solid #974982;
+  border-right: 6.4rem solid #974982;
   border-top: 9rem solid transparent;
   border-bottom: 9rem solid transparent;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 30vh;
   display: flex;
@@ -14,7 +14,7 @@
 }
 
 .socialdiv {
-  width: 7.2rem;
+  width: 6.4rem;
   height: 15.5rem;
   margin-top: 0.5rem;
   position: relative;
