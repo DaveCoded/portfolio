@@ -4,10 +4,9 @@
   border-right: 7.2rem solid rgb(21, 32, 99);
   border-top: 9rem solid transparent;
   border-bottom: 9rem solid transparent;
-  position: absolute;
+  position: fixed;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 28vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

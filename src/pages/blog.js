@@ -2,24 +2,29 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Link from "gatsby-link"
-import Img from "gatsby-image"
+import SocialBar from "../components/SocialBar/social-bar"
+import CategoryImage from "../components/BlogComponents/CategoryImage"
+import CategoryDiv from "../components/BlogComponents/CategoryDiv"
 
 import styles from "./blog.module.scss"
 
 const BlogPost = ({ node }) => {
   return (
-    <Link to={`blog/${node.slug}`}>
-      <div className={styles.postLayout}>
-        <h3>{node.title}</h3>
-        <div className={styles.featuredImage}>
-          <Img fluid={node.featuredImage.fluid} />
-        </div>
-        <div className={styles.contentBox}>
-          <p className={styles.createdAt}>{node.createdAt}</p>
-          <p>{node.content.childMarkdownRemark.excerpt}</p>
-        </div>
+    <article className={styles.postLayout}>
+      <div className={styles.featuredImage}>
+        <Link to={`blog/${node.slug}`}>
+          <CategoryImage subject={node.category} />
+        </Link>
       </div>
-    </Link>
+      <div style={{ paddingTop: "2rem" }}>
+        <Link to={`blog/${node.slug}`}>
+          <h3>{node.title}</h3>
+        </Link>
+        <span className={styles.createdAt}>{node.createdAt}</span>
+        <p>{node.content.childMarkdownRemark.excerpt}</p>
+      </div>
+      <CategoryDiv subject={node.category} />
+    </article>
   )
 }
 
@@ -27,6 +32,15 @@ const IndexPage = props => {
   return (
     // <Layout colorProp="blue">
     <div className={styles.indexLayout}>
+      <SocialBar />
+      <p
+        style={{
+          fontSize: "2.3rem",
+          marginBottom: "3rem",
+        }}
+      >
+        Writings and learnings about tech and other things.
+      </p>
       {props.data.allContentfulBlogPost.edges.map(edge => (
         <BlogPost key={edge.node.id} node={edge.node} />
       ))}
@@ -47,6 +61,7 @@ export const pageQuery = graphql`
         node {
           id
           title
+          category
           slug
           createdAt(formatString: "MMMM DD, YYYY")
           featuredImage {
