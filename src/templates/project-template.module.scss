@@ -15,7 +15,7 @@
 
   h1,
   h2 {
-    color: rgb(21, 32, 99);
+    color: var(--color-primary);
     font-family: "Lora", serif;
     font-weight: 400;
   }

@@ -15,7 +15,7 @@ class BlogPost extends Component {
     return (
       <article className={styles.articleWrapper}>
         <h1>{title}</h1>
-        <h3>{createdAt}</h3>
+        <p className={styles.createdAt}>{createdAt}</p>
         <div className={styles.featuredImageWrapper}>
           <Img sizes={featuredImage.sizes} style={{ borderRadius: "0.6rem" }} />
         </div>
