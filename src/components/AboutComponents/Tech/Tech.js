@@ -6,11 +6,11 @@ const Tech = () => (
       style={{
         marginBottom: "3rem",
         fontSize: "3rem",
-        color: "var(--pink)",
+        color: "var(--dark-grey)",
         textAlign: "center",
       }}
     >
-      Tech I Love
+      Tech I <span style={{ color: "var(--pink)" }}>Love</span>
     </h3>
     <p>
       As a front-end developer, I'm open to anything that delivers a beautiful

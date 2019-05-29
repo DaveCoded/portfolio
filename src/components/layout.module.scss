@@ -34,7 +34,6 @@
 
     li:hover {
       a {
-        color: var(--blue);
         background-color: #944781;
       }
     }
@@ -64,7 +63,6 @@
   transition: all 0.3s;
 
   &:hover {
-    color: var(--blue);
     background-color: #944781;
   }
 }

@@ -76,8 +76,8 @@ class About extends React.Component {
           <div className={styles.leftDiv}>
             <p>
               In August 2018, I started{" "}
-              <span style={{ color: "#3B4681" }}>Eeny Meeny Creative</span> with
-              a friend. We wanted to learn on the job, by founding our own
+              <span style={{ color: "var(--pink)" }}>Eeny Meeny Creative</span>{" "}
+              with a friend. We wanted to learn on the job, by founding our own
               company...
             </p>
           </div>
@@ -100,7 +100,7 @@ class About extends React.Component {
           <div className={styles.rightDiv}>
             <p>
               Now I want to join a team of developers to{" "}
-              <span style={{ color: "#EB3484" }}>learn</span> exciting new
+              <span style={{ color: "var(--pink)" }}>learn</span> exciting new
               technologies and methods...
             </p>
           </div>

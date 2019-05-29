@@ -5,11 +5,11 @@
   border: none;
   border-radius: 5px;
   padding: 0.6rem 1.2rem;
-  background-color: rgba(235, 52, 132, 0.44);
+  background-color: rgb(131, 193, 239);
   transition: all 0.3s;
 
   &:hover {
-    background-color: rgba(235, 52, 132, 0.8);
+    background-color: var(--blue-dark);
     cursor: pointer;
   }
 }
