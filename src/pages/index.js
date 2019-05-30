@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
+
 import SocialBar from "../components/SocialBar/social-bar"
-import BackgroundImage from "gatsby-background-image"
 import styles from "./index.module.scss"
 
 class HomePage extends Component {
@@ -14,21 +14,14 @@ class HomePage extends Component {
 
   render() {
     return (
-      <>
+      <main className={styles.Background}>
         <SocialBar />
-        <BackgroundImage
-          className={styles.background}
-          fluid={this.props.data.background.childImageSharp.fluid}
-        >
-          <h1 hidden>Dave</h1>
-          <h2 className={this.state.textClass}>Front-end Web Developer</h2>
-        </BackgroundImage>
-      </>
+      </main>
     )
   }
 
   // Only animate the h2 on first page load
-
+  /*
   componentDidMount() {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
       this.setState({
@@ -40,7 +33,7 @@ class HomePage extends Component {
         textClass: styles.loaded,
       })
     }
-  }
+  } */
 }
 
 export default HomePage
