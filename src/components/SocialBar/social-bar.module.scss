@@ -1,12 +1,12 @@
 .socialBar {
   width: 0;
-  height: 35rem;
-  border-right: 6.4rem solid var(--color-primary);
-  border-top: 9rem solid transparent;
-  border-bottom: 9rem solid transparent;
-  position: absolute;
+  height: 29rem;
+  border-right: 5.7rem solid var(--color-primary);
+  border-top: 7rem solid transparent;
+  border-bottom: 7rem solid transparent;
+  position: fixed;
   right: 0;
-  top: 30vh;
+  top: 28vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,9 +16,9 @@
 .socialdiv {
   width: 6.4rem;
   height: 15.5rem;
-  margin-top: 0.5rem;
+  margin: 0.3rem 0;
   position: relative;
-  right: 1px;
+  right: 0.4rem;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
