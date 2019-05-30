@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 
-import PatternBackground from "../components/PatternBackground/PatternBackground"
 import SocialBar from "../components/SocialBar/social-bar"
-// import styles from "./index.module.scss"
+import styles from "./index.module.scss"
 
 class HomePage extends Component {
   constructor(props) {
@@ -15,9 +14,9 @@ class HomePage extends Component {
 
   render() {
     return (
-      <PatternBackground>
+      <main className={styles.Background}>
         <SocialBar />
-      </PatternBackground>
+      </main>
     )
   }
 
