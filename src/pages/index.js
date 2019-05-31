@@ -18,3 +18,16 @@ const HomePage = () => {
 }
 
 export default HomePage
+
+/*
+if (window.sessionStorage.getItem("firstLoadDone") === null) {
+  this.setState({
+    textClass: styles.animate,
+  })
+  window.sessionStorage.setItem("firstLoadDone", 1)
+} else {
+  this.setState({
+    textClass: styles.loaded,
+  })
+}
+*/
