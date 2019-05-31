@@ -15,7 +15,9 @@ const HomePage = () => {
         Welcome to my
         <br /> portfolio
       </h1>
-      <p style={{ float: "right" }}>Now go explore...</p>
+      <p style={{ float: "right" }} id="explore">
+        Now go explore...
+      </p>
     </div>
   )
 }
