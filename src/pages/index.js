@@ -11,7 +11,10 @@ const HomePage = () => {
         </span>{" "}
         <span id="developer">a front-end developer from London</span>
       </p>
-      <h1 id="welcome">Welcome to my portfolio</h1>
+      <h1 id="welcome">
+        Welcome to my
+        <br /> portfolio
+      </h1>
       <p style={{ float: "right" }}>Now go explore...</p>
     </div>
   )
