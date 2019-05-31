@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./index.module.scss"
 
+import purpleButton from "../assets/svg/purple-button.svg"
+
 class HomePage extends Component {
   constructor(props) {
     super(props)
@@ -15,6 +17,10 @@ class HomePage extends Component {
   render() {
     return (
       <main className={styles.Background}>
+        <button className={styles.Button}>
+          <img src={purpleButton} alt="Click Me!" />
+          <span>Click Me!</span>
+        </button>
         <SocialBar />
       </main>
     )
