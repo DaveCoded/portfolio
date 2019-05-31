@@ -119,6 +119,11 @@ p {
   animation: descend 0.9s 0.8s backwards;
 }
 
+#welcome {
+  animation: borderAppearance duration timing-function delay iteration-count
+    direction fill-mode;
+}
+
 @keyframes fade {
   0% {
     opacity: 0;
@@ -133,4 +138,7 @@ p {
   20% {
     opacity: 0;
   }
+}
+
+@keyframes borderAppearance {
 }
