@@ -109,3 +109,28 @@ p {
   opacity: 0;
   transition: opacity 300ms ease-out;
 }
+
+#hello {
+  animation: fade 0.7s ease-in;
+}
+
+#developer {
+  position: absolute;
+  animation: descend 0.9s 0.8s backwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes descend {
+  0% {
+    transform: translateY(-37px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+}
