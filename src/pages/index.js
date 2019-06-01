@@ -1,5 +1,6 @@
 import React from "react"
 
+import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./index.module.scss"
 
 const HomePage = () => {
@@ -18,6 +19,7 @@ const HomePage = () => {
       <p style={{ float: "right" }} id="explore">
         Now go explore...
       </p>
+      <SocialBar />
     </div>
   )
 }
