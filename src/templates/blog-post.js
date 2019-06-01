@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
+import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./blog-post.module.scss"
 
 class BlogPost extends Component {
@@ -24,6 +25,7 @@ class BlogPost extends Component {
             __html: content.childMarkdownRemark.html,
           }}
         />
+        <SocialBar />
       </article>
     )
   }

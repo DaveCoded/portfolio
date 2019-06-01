@@ -1,51 +1,40 @@
-import React, { Component } from "react"
-import { graphql } from "gatsby"
+import React from "react"
 
 import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./index.module.scss"
 
-class HomePage extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      textClass: null,
-    }
-  }
-
-  render() {
-    return (
-      <main className={styles.Background}>
-        <SocialBar />
-      </main>
-    )
-  }
-
-  // Only animate the h2 on first page load
-  /*
-  componentDidMount() {
-    if (window.sessionStorage.getItem("firstLoadDone") === null) {
-      this.setState({
-        textClass: styles.animate,
-      })
-      window.sessionStorage.setItem("firstLoadDone", 1)
-    } else {
-      this.setState({
-        textClass: styles.loaded,
-      })
-    }
-  } */
+const HomePage = () => {
+  return (
+    <div className={styles.Background}>
+      <p style={{ position: "relative" }}>
+        <span style={{ display: "block", fontSize: "4rem" }} id="hello">
+          Hello. I'm Dave,
+        </span>{" "}
+        <span id="developer">a front-end developer from London</span>
+      </p>
+      <h1 id="welcome">
+        Welcome to my
+        <br /> portfolio
+      </h1>
+      <p style={{ float: "right" }} id="explore">
+        Now go explore...
+      </p>
+      <SocialBar />
+    </div>
+  )
 }
 
 export default HomePage
 
-export const query = graphql`
-  query {
-    background: file(relativePath: { eq: "backpng.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
+/*
+if (window.sessionStorage.getItem("firstLoadDone") === null) {
+  this.setState({
+    textClass: styles.animate,
+  })
+  window.sessionStorage.setItem("firstLoadDone", 1)
+} else {
+  this.setState({
+    textClass: styles.loaded,
+  })
+}
+*/

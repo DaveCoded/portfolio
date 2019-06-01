@@ -1,7 +1,7 @@
 .Overlay {
   width: 100%;
   height: 100vh;
-  background-color: #7f3d6e66;
+  background-color: rgba(255, 255, 255, 0.6);
   padding-top: 14rem;
 }
 
@@ -14,7 +14,7 @@
   }
 
   form {
-    background-color: #333;
+    background-color: var(--light-grey);
     padding: 4rem;
     border-radius: 5px;
     width: 30%;
@@ -24,7 +24,7 @@
       &,
       &:link,
       &:visited {
-        background-color: var(--pink);
+        background-color: var(--color-primary);
         padding: 0.8rem 4.8rem;
         width: 100%;
         border: solid 2px transparent;
@@ -36,11 +36,11 @@
         cursor: pointer;
 
         &:hover {
-          background-color: var(--light-pink);
+          background-color: var(--pink);
         }
 
         &:focus {
-          background-color: var(--light-pink);
+          background-color: var(--pink);
           outline: none;
           border-color: var(--orange);
         }
@@ -67,7 +67,7 @@
     color: inherit;
     padding: 1rem 2rem;
     border-radius: 0.6rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #fff;
     border: none;
     border-bottom: 3px solid transparent;
 
@@ -101,7 +101,7 @@
     color: inherit;
     padding: 1rem 2rem;
     border-radius: 0.6rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #fff;
     border: solid 1px transparent;
     resize: none;
 

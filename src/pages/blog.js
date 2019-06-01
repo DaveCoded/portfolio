@@ -12,12 +12,12 @@ const BlogPost = ({ node }) => {
   return (
     <article className={styles.postLayout}>
       <div className={styles.featuredImage}>
-        <Link to={`blog/${node.slug}`}>
+        <Link to={`/blog/${node.slug}`}>
           <CategoryImage subject={node.category} />
         </Link>
       </div>
       <div style={{ paddingTop: "2rem" }}>
-        <Link to={`blog/${node.slug}`}>
+        <Link to={`/blog/${node.slug}`}>
           <h3>{node.title}</h3>
         </Link>
         <span className={styles.createdAt}>{node.createdAt}</span>

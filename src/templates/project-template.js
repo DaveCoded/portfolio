@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+
+import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./project-template.module.scss"
 
 class Project extends Component {
@@ -23,6 +25,7 @@ class Project extends Component {
             __html: content.childMarkdownRemark.html,
           }}
         />
+        <SocialBar />
       </article>
     )
   }
