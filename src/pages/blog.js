@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Layout from "../components/layout"
-import Link from "gatsby-link"
 import SocialBar from "../components/SocialBar/social-bar"
 import CategoryImage from "../components/BlogComponents/CategoryImage"
 import CategoryDiv from "../components/BlogComponents/CategoryDiv"
@@ -13,14 +13,14 @@ const BlogPost = ({ node }) => {
   return (
     <article className={styles.postLayout}>
       <div className={styles.featuredImage}>
-        <Link to={`/blog/${node.slug}`}>
+        <AniLink fade to={`/blog/${node.slug}`}>
           <CategoryImage subject={node.category} />
-        </Link>
+        </AniLink>
       </div>
       <div style={{ paddingTop: "2rem" }}>
-        <Link to={`/blog/${node.slug}`}>
+        <AniLink fade to={`/blog/${node.slug}`}>
           <h3>{node.title}</h3>
-        </Link>
+        </AniLink>
         <span className={styles.createdAt}>{node.createdAt}</span>
         <p>{node.content.childMarkdownRemark.excerpt}</p>
       </div>
