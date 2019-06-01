@@ -131,7 +131,21 @@ p {
 }
 
 #explore {
-  animation: slide 1.3s ease-out 4s backwards;
+  animation: slide-right 1.3s ease-out 4s backwards;
+}
+
+#navbar {
+  animation: drop 0.6s 5.5s backwards;
+}
+
+#social-bar {
+  animation: slide-left 0.6s 5.5s backwards;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-6rem);
+  }
 }
 
 @keyframes fade {
@@ -150,9 +164,15 @@ p {
   }
 }
 
-@keyframes slide {
+@keyframes slide-right {
   0% {
     opacity: 0;
     transform: translateX(-50px);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(6rem);
   }
 }
