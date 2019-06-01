@@ -24,7 +24,7 @@ class Layout extends Component {
 
     return (
       <div className={styles.layout}>
-        <nav id="navbar">
+        <nav className={this.props.animate ? "navbar-drop" : null} id="navbar">
           <AniLink
             fade
             to="/"

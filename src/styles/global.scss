@@ -84,6 +84,22 @@ a {
   width: 1px;
 }
 
+#social-bar {
+  width: 0;
+  height: 29rem;
+  border-right: 5.7rem solid #fff;
+  border-top: 7rem solid transparent;
+  border-bottom: 7rem solid transparent;
+  position: fixed;
+  right: 0;
+  top: 28vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+  filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
 .nav-link {
   a {
     display: inline-block;
@@ -110,12 +126,15 @@ p {
   transition: opacity 300ms ease-out;
 }
 
-#hello {
+.fade-in-hello {
   animation: fade 0.9s ease-in;
 }
 
 #developer {
   position: absolute;
+}
+
+.descend-developer {
   animation: descend 1.1s 1s backwards;
 }
 
@@ -127,18 +146,21 @@ p {
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-transform: uppercase;
+}
+
+.fade-in-welcome {
   animation: fade 1.7s ease-in 2.2s backwards;
 }
 
-#explore {
+.slide-in-explore {
   animation: slide-right 1.3s ease-out 4s backwards;
 }
 
-#navbar {
+.navbar-drop {
   animation: drop 0.6s 5.5s backwards;
 }
 
-#social-bar {
+.social-bar-slide-in {
   animation: slide-left 0.6s 5.5s backwards;
 }
 

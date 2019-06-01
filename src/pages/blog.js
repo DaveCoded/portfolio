@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import Layout from "../components/layout"
 import Link from "gatsby-link"
 import SocialBar from "../components/SocialBar/social-bar"
 import CategoryImage from "../components/BlogComponents/CategoryImage"
@@ -30,22 +31,22 @@ const BlogPost = ({ node }) => {
 
 const IndexPage = props => {
   return (
-    // <Layout colorProp="blue">
-    <div className={styles.indexLayout}>
-      <SocialBar />
-      <p
-        style={{
-          fontSize: "2.3rem",
-          marginBottom: "3rem",
-        }}
-      >
-        Writings and learnings about tech and other things.
-      </p>
-      {props.data.allContentfulBlogPost.edges.map(edge => (
-        <BlogPost key={edge.node.id} node={edge.node} />
-      ))}
-    </div>
-    // </Layout>
+    <Layout>
+      <div className={styles.indexLayout}>
+        <SocialBar />
+        <p
+          style={{
+            fontSize: "2.3rem",
+            marginBottom: "3rem",
+          }}
+        >
+          Writings and learnings about tech and other things.
+        </p>
+        {props.data.allContentfulBlogPost.edges.map(edge => (
+          <BlogPost key={edge.node.id} node={edge.node} />
+        ))}
+      </div>
+    </Layout>
   )
 }
 

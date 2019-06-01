@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
+import Layout from "../components/layout"
 import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./project-template.module.scss"
 
@@ -14,19 +15,24 @@ class Project extends Component {
       content,
     } = this.props.data.contentfulProject
     return (
-      <article className={styles.projectWrapper}>
-        <h1>{title}</h1>
-        <a href={link}>{link}</a>
-        <div className={styles.featuredImageWrapper}>
-          <Img sizes={featuredImage.sizes} style={{ borderRadius: "0.6rem" }} />
-        </div>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: content.childMarkdownRemark.html,
-          }}
-        />
-        <SocialBar />
-      </article>
+      <Layout>
+        <article className={styles.projectWrapper}>
+          <h1>{title}</h1>
+          <a href={link}>{link}</a>
+          <div className={styles.featuredImageWrapper}>
+            <Img
+              sizes={featuredImage.sizes}
+              style={{ borderRadius: "0.6rem" }}
+            />
+          </div>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: content.childMarkdownRemark.html,
+            }}
+          />
+          <SocialBar />
+        </article>
+      </Layout>
     )
   }
 }
