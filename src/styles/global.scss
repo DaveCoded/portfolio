@@ -110,12 +110,15 @@ p {
   transition: opacity 300ms ease-out;
 }
 
-#hello {
+.fade-in-hello {
   animation: fade 0.9s ease-in;
 }
 
 #developer {
   position: absolute;
+}
+
+.descend-developer {
   animation: descend 1.1s 1s backwards;
 }
 
@@ -127,10 +130,13 @@ p {
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-transform: uppercase;
+}
+
+.fade-in-welcome {
   animation: fade 1.7s ease-in 2.2s backwards;
 }
 
-#explore {
+.slide-in-explore {
   animation: slide-right 1.3s ease-out 4s backwards;
 }
 
