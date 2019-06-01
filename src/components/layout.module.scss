@@ -6,9 +6,10 @@
     width: 100%;
     padding: 0 6.2rem;
     z-index: 500;
-    background-color: var(--color-primary);
+    background-color: #fff;
     transition: top 0.3s;
     height: 5.2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   }
   ul {
     list-style: none;
@@ -34,12 +35,13 @@
 
     li:hover {
       a {
-        background-color: #944781;
+        background-color: #f1f1f1;
+        color: var(--pink);
       }
     }
   }
   footer {
-    background-color: var(--color-primary);
+    background-color: #fff;
     text-align: center;
     font-size: 2rem;
     font-family: "Neutra Text Light";
@@ -47,22 +49,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
+    z-index: 400;
+    position: relative;
 
     p {
-      color: #ffffff;
+      color: var(--dark-grey);
     }
   }
 }
 .homeLink {
+  color: var(--dark-grey);
   display: inline-block;
   height: 100%;
   padding: 1rem 1.5rem;
-  color: white;
   font-size: 2.2rem;
   font-family: "Neutra Text", sans-serif;
   transition: all 0.3s;
 
   &:hover {
-    background-color: #944781;
+    background-color: #f1f1f1;
+    color: var(--pink);
   }
 }
