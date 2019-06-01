@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
+import Layout from "../components/layout"
 import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./blog-post.module.scss"
 
@@ -14,19 +15,24 @@ class BlogPost extends Component {
       content,
     } = this.props.data.contentfulBlogPost
     return (
-      <article className={styles.articleWrapper}>
-        <h1>{title}</h1>
-        <p className={styles.createdAt}>{createdAt}</p>
-        <div className={styles.featuredImageWrapper}>
-          <Img sizes={featuredImage.sizes} style={{ borderRadius: "0.6rem" }} />
-        </div>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: content.childMarkdownRemark.html,
-          }}
-        />
-        <SocialBar />
-      </article>
+      <Layout>
+        <article className={styles.articleWrapper}>
+          <h1>{title}</h1>
+          <p className={styles.createdAt}>{createdAt}</p>
+          <div className={styles.featuredImageWrapper}>
+            <Img
+              sizes={featuredImage.sizes}
+              style={{ borderRadius: "0.6rem" }}
+            />
+          </div>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: content.childMarkdownRemark.html,
+            }}
+          />
+          <SocialBar />
+        </article>
+      </Layout>
     )
   }
 }

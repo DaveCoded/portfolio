@@ -20,9 +20,9 @@ module.exports = {
     "gatsby-transformer-remark",
     {
       resolve: "gatsby-plugin-transition-link",
-      options: {
-        layout: require.resolve(`./src/components/layout.js`),
-      },
+      // options: {
+      //   layout: require.resolve(`./src/components/layout.js`),
+      // },
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,

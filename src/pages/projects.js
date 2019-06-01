@@ -1,16 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import Layout from "../components/layout"
 import styles from "./projects.module.scss"
 import Project from "../components/Project/Project"
 
 const ProjectsPage = props => {
   return (
-    <main className={styles.main}>
-      {props.data.allContentfulProject.edges.map(edge => (
-        <Project key={edge.node.id} node={edge.node} />
-      ))}
-    </main>
+    <Layout>
+      <main className={styles.main}>
+        {props.data.allContentfulProject.edges.map(edge => (
+          <Project key={edge.node.id} node={edge.node} />
+        ))}
+      </main>
+    </Layout>
   )
 }
 

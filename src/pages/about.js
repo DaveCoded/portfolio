@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 
+import Layout from "../components/layout"
 import Button from "../components/Button/Button"
 import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./about.module.scss"
@@ -25,7 +26,7 @@ class About extends React.Component {
 
   render() {
     return (
-      <>
+      <Layout>
         <header className={styles.header}>
           <div className={styles.container}>
             <div className={styles.buttonColumn}>
@@ -118,7 +119,7 @@ class About extends React.Component {
             for everyone
           </p>
         </section>
-      </>
+      </Layout>
     )
   }
 }
