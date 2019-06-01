@@ -14,7 +14,7 @@ class HomePage extends Component {
 
   render() {
     return (
-      <Layout>
+      <Layout animate={this.state.animate}>
         <div className={styles.Background}>
           <p style={{ position: "relative" }}>
             <span

@@ -10,8 +10,8 @@ const githubURL = "https://github.com/DaveCoded"
 const linkedinURL = "https://www.linkedin.com/in/dave-bernhard-93b0b876/"
 const twitterURL = "https://twitter.com/daveforall"
 
-const SocialBar = () => (
-  <div className={styles.socialBar} id="social-bar">
+const SocialBar = props => (
+  <div className={props.animate ? "social-bar-slide-in" : null} id="social-bar">
     <div className={styles.socialdiv}>
       <SocialButton href={githubURL} src={github} alt="Github" />
       <SocialButton href={linkedinURL} src={linkedin} alt="LinkedIn" />

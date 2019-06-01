@@ -84,6 +84,22 @@ a {
   width: 1px;
 }
 
+#social-bar {
+  width: 0;
+  height: 29rem;
+  border-right: 5.7rem solid #fff;
+  border-top: 7rem solid transparent;
+  border-bottom: 7rem solid transparent;
+  position: fixed;
+  right: 0;
+  top: 28vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+  filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
 .nav-link {
   a {
     display: inline-block;
