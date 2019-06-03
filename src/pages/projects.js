@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./projects.module.scss"
 import Project from "../components/Project/Project"
 
@@ -12,6 +13,7 @@ const ProjectsPage = props => {
         {props.data.allContentfulProject.edges.map(edge => (
           <Project key={edge.node.id} node={edge.node} />
         ))}
+        <SocialBar />
       </main>
     </Layout>
   )
