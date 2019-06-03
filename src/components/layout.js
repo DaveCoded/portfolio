@@ -3,6 +3,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./layout.module.scss"
 import ListLink from "./ListLink/ListLink"
+import Hamburger from "./Hamburger/Hamburger"
+import SideNav from "./SideNav/SideNav"
 import cv from "../assets/documents/CV.pdf"
 
 class Layout extends Component {
@@ -23,34 +25,41 @@ class Layout extends Component {
     let year = new Date().getFullYear()
 
     return (
-      <div className={styles.layout}>
-        <nav className={this.props.animate ? "navbar-drop" : null} id="navbar">
-          <AniLink
-            fade
-            to="/"
-            activeStyle={{
-              display: "none",
-            }}
+      <>
+        <div className={styles.layout}>
+          <nav
+            className={this.props.animate ? "navbar-drop" : null}
+            id="navbar"
           >
-            <li className={styles.homeLink}>home</li>
-          </AniLink>
-          <ul className="nav-link">
-            <ListLink to="/about/">about</ListLink>
-            <ListLink to="/projects/">projects</ListLink>
-            <ListLink to="/blog/">blog</ListLink>
-            <li>
-              <a href={cv} target="_blank" rel="noopener noreferrer">
-                cv
-              </a>
-            </li>
-            <ListLink to="/contact/">contact</ListLink>
-          </ul>
-        </nav>
-        {this.props.children}
-        <footer>
-          <p>&copy;{year} David Bernhard</p>
-        </footer>
-      </div>
+            <AniLink
+              fade
+              to="/"
+              activeStyle={{
+                display: "none",
+              }}
+            >
+              <li className={styles.homeLink}>home</li>
+            </AniLink>
+            <ul className="nav-link">
+              <ListLink to="/about/">about</ListLink>
+              <ListLink to="/projects/">projects</ListLink>
+              <ListLink to="/blog/">blog</ListLink>
+              <li>
+                <a href={cv} target="_blank" rel="noopener noreferrer">
+                  cv
+                </a>
+              </li>
+              <ListLink to="/contact/">contact</ListLink>
+            </ul>
+            <Hamburger />
+          </nav>
+          {this.props.children}
+          <footer>
+            <p>&copy;{year} David Bernhard</p>
+          </footer>
+        </div>
+        <SideNav />
+      </>
     )
   }
 }

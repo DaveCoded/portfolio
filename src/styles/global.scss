@@ -39,6 +39,30 @@ html {
   font-size: 62.5%; // So now 1rem = 10px => 10px/16px = 62.5%
 }
 
+@media (min-width: 1700px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 1370px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 610px) {
+  html {
+    font-size: 43%;
+  }
+}
+
 body {
   box-sizing: border-box;
   font-family: "Neutra Text";

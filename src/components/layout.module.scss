@@ -16,9 +16,7 @@
     float: right;
     display: flex;
     justify-content: space-between;
-    width: 32%;
     height: 100%;
-    margin-right: 3rem;
     font-size: 2.1rem;
     font-family: "Neutra Text";
 
@@ -58,6 +56,7 @@
     }
   }
 }
+
 .homeLink {
   color: var(--dark-grey);
   display: inline-block;
@@ -72,3 +71,26 @@
     color: var(--pink);
   }
 }
+
+@media (max-width: 470px) {
+  .layout nav {
+    padding: 0 2.2rem;
+    ul {
+      display: none;
+    }
+  }
+}
+
+// @media (max-width: 450px) {
+//   .layout nav {
+//     height: 4.1rem;
+//     ul {
+//       float: none;
+//       font-size: 1.9rem;
+
+//       li a {
+//         padding: 0.8rem 1.2rem 0;
+//       }
+//     }
+//   }
+// }
