@@ -8,6 +8,13 @@ import SideNav from "./SideNav/SideNav"
 import cv from "../assets/documents/CV.pdf"
 
 class Layout extends Component {
+  constructor() {
+    super()
+    this.state = {
+      navIsOpen: false,
+    }
+  }
+
   componentDidMount() {
     var prevScrollpos = window.pageYOffset
     window.onscroll = function() {
@@ -19,6 +26,14 @@ class Layout extends Component {
       }
       prevScrollpos = currentScrollPos
     }
+  }
+
+  toggleNav() {
+    this.setState(prevState => {
+      return {
+        navIsOpen: !prevState.navIsOpen,
+      }
+    })
   }
 
   render() {
@@ -51,14 +66,17 @@ class Layout extends Component {
               </li>
               <ListLink to="/contact/">contact</ListLink>
             </ul>
-            <Hamburger />
+            <Hamburger toggleNav={this.toggleNav.bind(this)} />
           </nav>
           {this.props.children}
           <footer>
             <p>&copy;{year} David Bernhard</p>
           </footer>
         </div>
-        <SideNav />
+        <SideNav
+          navIsOpen={this.state.navIsOpen}
+          toggleNav={this.toggleNav.bind(this)}
+        />
       </>
     )
   }

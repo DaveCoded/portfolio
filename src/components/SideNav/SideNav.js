@@ -4,13 +4,23 @@ import { Link } from "gatsby"
 import cv from "../../assets/documents/CV.pdf"
 import styles from "./SideNav.module.scss"
 
-const SideNav = () => {
+const SideNav = props => {
   return (
-    <nav className={styles.SideNav}>
-      <button aria-label="Close navigation sidebar" className={styles.CloseNav}>
+    <nav
+      className={styles.SideNav}
+      style={props.navIsOpen ? { transform: "translateX(0)" } : null}
+    >
+      <button
+        aria-label="Close navigation sidebar"
+        className={styles.CloseNav}
+        onClick={props.toggleNav}
+      >
         &times;
       </button>
       <ul>
+        <li>
+          <Link to="/">home</Link>
+        </li>
         <li>
           <Link to="/about">about</Link>
         </li>
