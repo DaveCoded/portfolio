@@ -16,13 +16,15 @@ class HomePage extends Component {
     return (
       <Layout animate={this.state.animate}>
         <div className={styles.Background}>
-          <p style={{ position: "relative" }}>
+          <p style={{ position: "relative" }} id="hello-p">
             <span
-              className={this.state.animate ? "fade-in-hello" : null}
-              style={{ display: "block", fontSize: "4rem" }}
+              className={
+                this.state.animate ? "fade-in-hello hello-span" : "hello-span"
+              }
             >
               Hello. I'm Dave,
             </span>{" "}
+            <br />
             <span
               className={this.state.animate ? "descend-developer" : null}
               id="developer"
@@ -38,8 +40,9 @@ class HomePage extends Component {
             <br /> portfolio
           </h1>
           <p
-            className={this.state.animate ? "slide-in-explore" : null}
-            style={{ float: "right" }}
+            className={
+              this.state.animate ? "slide-in-explore explore-p" : "explore-p"
+            }
           >
             Now go explore...
           </p>

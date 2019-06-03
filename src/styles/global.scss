@@ -135,6 +135,30 @@ p {
   color: var(--dark-grey);
 }
 
+.hello-span {
+  font-size: 4rem;
+  white-space: nowrap;
+}
+
+.explore-p {
+  float: right;
+}
+
+@media (max-width: 660px) {
+  #hello-p {
+    text-align: center;
+  }
+  #developer {
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .explore-p {
+    float: none;
+    text-align: center;
+  }
+}
+
 .fade-enter {
   opacity: 0;
 }
