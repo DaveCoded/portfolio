@@ -13,7 +13,7 @@ const Project = ({ node }) => {
   }
 
   return (
-    <Link to={`projects/${node.slug}`}>
+    <Link to={`/projects/${node.slug}`}>
       <div className={styles.container}>
         <Img fluid={node.featuredImage.fluid} style={{ borderRadius: "5px" }} />
 
