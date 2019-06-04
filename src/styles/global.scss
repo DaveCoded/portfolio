@@ -9,7 +9,7 @@
   --pink: #eb3484;
   --light-pink: #ff568e;
   --orange: #dfba00;
-  --box-shadow: 3px 3px 2rem rgba(0, 0, 0, 0.4),
+  --box-shadow: 3px 3px 2rem rgba(0, 0, 0, 0.2),
     10px 10px 6rem rgba(0, 0, 0, 0.1);
 }
 
@@ -116,12 +116,22 @@ a {
   border-bottom: 7rem solid transparent;
   position: fixed;
   right: 0;
-  top: 28vh;
+  top: calc(50vh - 14.5rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 10;
   filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 420px) {
+  #social-bar {
+    height: 25rem;
+    border-right: 5rem solid #fff;
+    border-top: 6rem solid transparent;
+    border-bottom: 6rem solid transparent;
+    top: calc(50vh - 12.5rem);
+  }
 }
 
 .nav-link {

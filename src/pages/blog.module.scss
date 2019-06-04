@@ -1,7 +1,8 @@
 .indexLayout {
-  padding: 12rem 32rem;
+  padding-top: 12rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
   top: 0;
   left: 0;
@@ -12,20 +13,20 @@
 }
 
 .postLayout {
-  height: 16.5rem;
   background-color: #edf2f2;
+  width: 88rem;
   border-radius: 5px;
   box-shadow: var(--box-shadow);
   display: grid;
   grid-template-columns: 22rem 1fr 2rem;
-  grid-template-rows: max-content 1fr;
+  grid-template-rows: max-content max-content 1fr;
   grid-column-gap: 3rem;
   margin-bottom: 4rem;
   transition: all 0.25s ease-out;
 
   h3 {
     color: var(--dark-grey);
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     margin: 1.5rem 0;
     font-family: "Lora";
     font-weight: 700;
@@ -60,16 +61,16 @@
   }
 
   .createdAt {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #777;
-    float: right;
-    margin-top: 0.7rem;
+    margin-top: 0.4rem;
   }
 
   p {
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: #152063;
     margin-top: 1.6rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -80,5 +81,46 @@
 
   & > div {
     height: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .postLayout {
+    width: 80rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .postLayout {
+    width: 70rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .postLayout {
+    width: 54rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 3rem;
+  }
+  .featuredImage {
+    margin: 0rem -3rem;
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .featuredImage {
+    display: none;
+  }
+  .centralColumn {
+    width: 70%;
+  }
+  .postLayout {
+    width: 100%;
+
+    h3 {
+      font-size: 2rem;
+    }
   }
 }
