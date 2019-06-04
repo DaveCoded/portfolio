@@ -27,8 +27,8 @@ const BlogPost = ({ node }) => {
         <AniLink fade to={`/blog/${node.slug}`}>
           <h3>{node.title}</h3>
         </AniLink>
-        <span className={styles.createdAt}>{node.createdAt}</span>
       </div>
+      <span className={styles.createdAt}>{node.createdAt}</span>
       <p>{node.content.childMarkdownRemark.excerpt}</p>
       <CategoryDiv subject={node.category} />
     </article>
@@ -39,18 +39,20 @@ const IndexPage = props => {
   return (
     <Layout>
       <div className={styles.indexLayout}>
-        <SocialBar />
-        <p
-          style={{
-            fontSize: "2.3rem",
-            marginBottom: "3rem",
-          }}
-        >
-          Writings and learnings about tech and other things.
-        </p>
-        {props.data.allContentfulBlogPost.edges.map(edge => (
-          <BlogPost key={edge.node.id} node={edge.node} />
-        ))}
+        <div className={styles.centralColumn}>
+          <SocialBar />
+          <p
+            style={{
+              fontSize: "2.3rem",
+              marginBottom: "3rem",
+            }}
+          >
+            Writings and learnings about tech and other things.
+          </p>
+          {props.data.allContentfulBlogPost.edges.map(edge => (
+            <BlogPost key={edge.node.id} node={edge.node} />
+          ))}
+        </div>
       </div>
     </Layout>
   )
