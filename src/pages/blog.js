@@ -17,13 +17,19 @@ const BlogPost = ({ node }) => {
           <CategoryImage subject={node.category} />
         </AniLink>
       </div>
-      <div style={{ paddingTop: "2rem" }}>
+      <div
+        style={{
+          paddingTop: "2rem",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
         <AniLink fade to={`/blog/${node.slug}`}>
           <h3>{node.title}</h3>
         </AniLink>
         <span className={styles.createdAt}>{node.createdAt}</span>
-        <p>{node.content.childMarkdownRemark.excerpt}</p>
       </div>
+      <p>{node.content.childMarkdownRemark.excerpt}</p>
       <CategoryDiv subject={node.category} />
     </article>
   )

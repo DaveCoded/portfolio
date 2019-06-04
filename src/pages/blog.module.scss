@@ -12,7 +12,6 @@
 }
 
 .postLayout {
-  height: 16.5rem;
   background-color: #edf2f2;
   border-radius: 5px;
   box-shadow: var(--box-shadow);
@@ -62,7 +61,6 @@
   .createdAt {
     font-size: 1.8rem;
     color: #777;
-    float: right;
     margin-top: 0.7rem;
   }
 
@@ -70,6 +68,7 @@
     font-size: 2rem;
     color: #152063;
     margin-top: 1.6rem;
+    padding-bottom: 2rem;
   }
 }
 
