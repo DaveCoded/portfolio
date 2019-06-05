@@ -3,10 +3,14 @@
   font-size: 2.2rem;
   font-family: inherit;
   border: none;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   padding: 0.6rem 1.2rem;
   background-color: rgb(131, 193, 239);
   transition: all 0.3s;
+  transform: rotate(270deg);
+  position: relative;
+  left: 3.2rem;
+  clip-path: polygon(86% 0, 100% 49%, 100% 100%, 0 100%, 0 0);
 
   &:hover {
     background-color: var(--blue-dark);

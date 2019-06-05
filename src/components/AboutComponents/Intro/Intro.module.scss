@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: absolute;
 }
 
@@ -20,4 +21,13 @@
 
 .text {
   width: 50%;
+}
+
+@media (max-width: 850px) {
+  .text {
+    line-height: 1.1;
+    p:not(:last-of-type) {
+      margin-bottom: 1.2rem;
+    }
+  }
 }
