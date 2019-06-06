@@ -23,10 +23,34 @@
     }
   }
 
-  img,
-  iframe {
+  img {
     display: block;
     margin: 0 auto;
     margin-top: 2.5rem;
+  }
+}
+
+@media (max-width: 972px) {
+  .wrapper {
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 882px) {
+  .wrapper {
+    margin: -1rem 1rem -1rem 0;
+  }
+  .contentBox {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    margin: 1rem 3rem 0 0;
+
+    p {
+      margin-bottom: 2rem;
+    }
   }
 }
