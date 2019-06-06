@@ -2,8 +2,9 @@
   height: 100vh;
   width: 100%;
   position: relative;
-  padding: 12rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(141deg, #e1e1e1 30%, #fff 50%, #dedede 70%);
 
   p {
