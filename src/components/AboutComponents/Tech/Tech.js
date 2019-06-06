@@ -1,7 +1,9 @@
 import React from "react"
 
+import styles from "./Tech.module.scss"
+
 const Tech = () => (
-  <div style={{ position: "absolute", marginRight: "4.2rem", padding: "2rem" }}>
+  <div className={styles.Tech}>
     <h3
       style={{
         marginBottom: "3rem",

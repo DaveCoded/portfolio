@@ -1,0 +1,12 @@
+.Tech {
+  position: absolute;
+  margin-right: 4.2rem;
+  padding: 2rem;
+  padding-top: 7rem;
+}
+
+@media (max-width: 920px) {
+  .Tech {
+    padding-top: 5rem;
+  }
+}
