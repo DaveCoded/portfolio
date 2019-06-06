@@ -41,7 +41,7 @@
 .contentBox {
   background-color: white;
   width: 100%;
-  min-height: 50rem;
+  height: 50rem;
   border-radius: 5px;
   box-shadow: var(--box-shadow);
   padding: 4.2rem 4.5rem;
@@ -63,6 +63,36 @@
 @media (max-width: 810px) {
   .contentBox {
     padding: 3.2rem 3.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .contentBox {
+    height: 66rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentBox {
+    height: 72rem;
+  }
+}
+
+@media (max-width: 810px) {
+  .contentBox {
+    padding: 3.2rem 3.5rem;
+  }
+}
+
+@media (max-width: 384px) {
+  .contentBox {
+    height: 77rem;
+  }
+}
+
+@media (max-width: 332px) {
+  .contentBox {
+    height: 81rem;
   }
 }
 
