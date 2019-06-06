@@ -4,6 +4,15 @@ import { Link } from "gatsby"
 import cv from "../../assets/documents/CV.pdf"
 import styles from "./SideNav.module.scss"
 
+import SocialButton from "../SocialBar/social-button"
+import github from "../../assets/svg/github-button.svg"
+import linkedin from "../../assets/svg/linkedin-button.svg"
+import twitter from "../../assets/svg/twitter-button.svg"
+
+const githubURL = "https://github.com/DaveCoded"
+const linkedinURL = "https://www.linkedin.com/in/dave-bernhard-93b0b876/"
+const twitterURL = "https://twitter.com/daveforall"
+
 const SideNav = props => {
   return (
     <nav
@@ -37,6 +46,11 @@ const SideNav = props => {
           <Link to="/contact">contact</Link>
         </li>
       </ul>
+      <div className={styles.socialDiv}>
+        <SocialButton href={githubURL} src={github} alt="Github" />
+        <SocialButton href={linkedinURL} src={linkedin} alt="LinkedIn" />
+        <SocialButton href={twitterURL} src={twitter} alt="Twitter" />
+      </div>
     </nav>
   )
 }
