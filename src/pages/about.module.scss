@@ -141,6 +141,7 @@
     height: 100%;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     & > div {
       width: 100%;
@@ -168,5 +169,38 @@
     border: 1px solid var(--dark-grey);
     background-color: var(--dark-grey);
     margin: 7rem 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .eeny {
+    height: 64vh;
+
+    & > div {
+      & > div {
+        width: 58%;
+      }
+    }
+  }
+  .laptop {
+    height: 64vh;
+  }
+  .betterWeb {
+    min-height: 64vh;
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .eeny {
+    flex-direction: column-reverse;
+    & > div {
+      & > div {
+        width: 28rem;
+      }
+    }
+  }
+  .laptop {
+    flex-direction: column;
   }
 }
