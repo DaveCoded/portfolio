@@ -33,15 +33,17 @@ class Layout extends Component {
             className={this.props.animate ? "navbar-drop" : null}
             id="navbar"
           >
-            <AniLink
-              fade
-              to="/"
-              activeStyle={{
-                display: "none",
-              }}
-            >
-              <li className={styles.homeLink}>home</li>
-            </AniLink>
+            <li className={styles.homeLink}>
+              <AniLink
+                fade
+                to="/"
+                activeStyle={{
+                  display: "none",
+                }}
+              >
+                home
+              </AniLink>
+            </li>
             <ul className="nav-link">
               <ListLink to="/about/">about</ListLink>
               <ListLink to="/projects/">projects</ListLink>

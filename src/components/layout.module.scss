@@ -8,7 +8,7 @@
     z-index: 500;
     background-color: #fff;
     transition: top 0.3s;
-    height: 5.2rem;
+    height: 5.8rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   }
   ul {
@@ -22,11 +22,14 @@
 
     li {
       height: 100%;
+      display: table;
     }
 
     li a {
       height: 100%;
-      padding: 1rem 2.1rem;
+      padding: 0 2.1rem;
+      vertical-align: middle;
+      display: table-cell;
       transition: 0.3s;
       transition: all 0.3s;
     }
@@ -60,9 +63,9 @@
 
 .homeLink {
   color: var(--dark-grey);
-  display: inline-block;
+  display: inline-table;
   height: 100%;
-  padding: 1rem 1.5rem;
+  padding: 0 1.5rem;
   font-size: 2.2rem;
   font-family: "Neutra Text", sans-serif;
   transition: all 0.3s;
@@ -70,6 +73,14 @@
   &:hover {
     background-color: #f1f1f1;
     color: var(--pink);
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 
@@ -85,17 +96,3 @@
     display: none;
   }
 }
-
-// @media (max-width: 450px) {
-//   .layout nav {
-//     height: 4.1rem;
-//     ul {
-//       float: none;
-//       font-size: 1.9rem;
-
-//       li a {
-//         padding: 0.8rem 1.2rem 0;
-//       }
-//     }
-//   }
-// }
