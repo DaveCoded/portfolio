@@ -17,7 +17,8 @@
   h2 {
     color: var(--color-primary);
     font-family: "Lora", serif;
-    font-weight: 400;
+    font-weight: 700;
+    font-style: italic;
   }
 
   h1 {
@@ -65,6 +66,25 @@
 }
 
 .featuredImageWrapper {
-  width: 40%;
+  width: 38rem;
   margin: 4rem auto;
+}
+
+@media (max-width: 840px) {
+  .articleWrapper {
+    grid-template-columns: 1fr 70rem 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .articleWrapper {
+    grid-template-columns: 1fr 92% 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .articleWrapper blockquote {
+    padding: 3rem 1rem 3rem 1rem;
+    width: 94%;
+  }
 }
