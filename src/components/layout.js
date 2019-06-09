@@ -6,6 +6,15 @@ import ListLink from "./ListLink/ListLink"
 import Hamburger from "./Hamburger/Hamburger"
 import SideNav from "./SideNav/SideNav"
 import cv from "../assets/documents/CV.pdf"
+import SocialButton from "./SocialBar/social-button"
+
+import github from "../assets/svg/github-button.svg"
+import linkedin from "../assets/svg/linkedin-button.svg"
+import twitter from "../assets/svg/twitter-button.svg"
+
+const githubURL = "https://github.com/DaveCoded"
+const linkedinURL = "https://www.linkedin.com/in/dave-bernhard-93b0b876/"
+const twitterURL = "https://twitter.com/daveforall"
 
 class Layout extends Component {
   constructor() {
@@ -60,6 +69,11 @@ class Layout extends Component {
           {this.props.children}
           <footer>
             <p>&copy;{year} David Bernhard</p>
+            <div className={styles.socialButtons}>
+              <SocialButton href={githubURL} src={github} alt="Github" />
+              <SocialButton href={linkedinURL} src={linkedin} alt="LinkedIn" />
+              <SocialButton href={twitterURL} src={twitter} alt="Twitter" />
+            </div>
           </footer>
         </div>
         <SideNav
