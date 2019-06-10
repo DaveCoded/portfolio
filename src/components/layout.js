@@ -44,7 +44,7 @@ class Layout extends Component {
             className={this.props.animate ? "navbar-drop" : null}
             id="navbar"
           >
-            <li className={styles.homeLink}>
+            <span className={styles.homeLink}>
               <AniLink
                 fade
                 to="/"
@@ -54,7 +54,7 @@ class Layout extends Component {
               >
                 home
               </AniLink>
-            </li>
+            </span>
             <ul className="nav-link">
               <ListLink to="/about/">about</ListLink>
               <ListLink to="/projects/">projects</ListLink>
