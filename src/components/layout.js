@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
+import SEO from "../components/SEO"
 import styles from "./layout.module.scss"
 import ListLink from "./ListLink/ListLink"
 import Hamburger from "./Hamburger/Hamburger"
@@ -37,6 +38,7 @@ class Layout extends Component {
 
     return (
       <>
+        <SEO />
         <div className={styles.layout}>
           <nav
             className={this.props.animate ? "navbar-drop" : null}

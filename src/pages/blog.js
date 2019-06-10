@@ -24,7 +24,7 @@ const BlogPost = ({ node }) => {
           justifyContent: "space-between",
         }}
       >
-        <AniLink fade to={`/blog/${node.slug}`}>
+        <AniLink fade to={`/blog${node.slug}`}>
           <h3>{node.title}</h3>
         </AniLink>
       </div>
