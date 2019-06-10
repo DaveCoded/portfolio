@@ -5,7 +5,7 @@ module.exports = {
   description:
     "The online portfolio and blog of London-based web developer, Dave Bernhard",
   url: "https://dave-bernhard.netlify.com", // Site domain without trailing slash
-  siteURL: "https://dave-bernhard.netlify.com", // url + pathPrefix
+  siteUrl: "https://dave-bernhard.netlify.com", // url + pathPrefix
   siteLanguage: "en", // Language Tag on <html> element
   logo: "static/android-chrome-512x512.png",
   banner: "static/android-chrome-512x512.png",
