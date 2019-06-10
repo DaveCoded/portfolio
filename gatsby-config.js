@@ -49,27 +49,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-  
-            allSitePage {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-        }`,
-      },
-    },
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
