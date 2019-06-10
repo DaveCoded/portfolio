@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
+import SEO from "../components/SEO"
 import Layout from "../components/layout"
 import SocialBar from "../components/SocialBar/social-bar"
 import styles from "./project-template.module.scss"
@@ -12,10 +13,19 @@ class Project extends Component {
       title,
       link,
       featuredImage,
+      slug,
+      description,
       content,
     } = this.props.data.contentfulProject
     return (
       <Layout>
+        <SEO
+          title={title}
+          desc={description || " "}
+          image={featuredImage}
+          pathname={slug}
+          article
+        />
         <article className={styles.projectWrapper}>
           <h1>{title}</h1>
           <a href={link}>{link}</a>
@@ -44,6 +54,8 @@ export const pageQuery = graphql`
     contentfulProject(slug: { eq: $slug }) {
       title
       link
+      slug
+      description
       createdAt(formatString: "MMMM DD, YYYY")
       featuredImage {
         sizes(maxWidth: 600) {
