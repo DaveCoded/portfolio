@@ -48,6 +48,12 @@ module.exports = {
         id: "20537975",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-141784999-1`
+      }
+    },
     `gatsby-plugin-netlify`,
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
