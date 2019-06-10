@@ -8,6 +8,7 @@ module.exports = {
   siteURL: "https://eloquent-villani-979120.netlify.com/", // url + pathPrefix
   siteLanguage: "en", // Language Tag on <html> element
   logo: "static/android-chrome-512x512.png",
+  banner: "static/android-chrome-512x512.png",
   favicon: "static/android-chrome-512x512.png", // Manifest favicon generation
   shortName: "DavePortfolio", // Shortname for manifest, must be shorter than 12 characters
   author: "Dave", // Author for schemaORGJSONLD
