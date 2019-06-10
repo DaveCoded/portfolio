@@ -86,6 +86,10 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
             <meta name="image" content={seo.image} />
             <meta name="apple-mobile-web-app-title" content={shortName} />
             <meta name="application-name" content={shortName} />
+            <meta
+              name="google-site-verification"
+              content="ygcEJKh4j7TLkf8IF5UntpTUG1-Qdn3i3BRpWRo2nhA"
+            />
             <script type="application/ld+json">
               {JSON.stringify(schemaOrgJSONLD)}
             </script>
