@@ -68,11 +68,17 @@ class Layout extends Component {
           </nav>
           {this.props.children}
           <footer>
-            <p>&copy;{year} David Bernhard</p>
-            <div className={styles.socialButtons}>
-              <SocialButton href={githubURL} src={github} alt="Github" />
-              <SocialButton href={linkedinURL} src={linkedin} alt="LinkedIn" />
-              <SocialButton href={twitterURL} src={twitter} alt="Twitter" />
+            <div className={styles.innerDiv}>
+              <p>&copy;{year} David Bernhard</p>
+              <div className={styles.socialButtons}>
+                <SocialButton href={githubURL} src={github} alt="Github" />
+                <SocialButton
+                  href={linkedinURL}
+                  src={linkedin}
+                  alt="LinkedIn"
+                />
+                <SocialButton href={twitterURL} src={twitter} alt="Twitter" />
+              </div>
             </div>
           </footer>
         </div>

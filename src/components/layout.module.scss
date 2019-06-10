@@ -47,9 +47,8 @@
     text-align: center;
     font-size: 2rem;
     font-family: "Neutra Text Light";
-    height: 6rem;
+    height: 8rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
     z-index: 400;
@@ -97,5 +96,14 @@
   }
 }
 
+.innerDiv {
+  display: flex;
+  align-items: center;
+}
+
 .socialButtons {
+  width: 14rem;
+  display: flex;
+  margin-top: 0.7rem;
+  margin-left: 3rem;
 }
