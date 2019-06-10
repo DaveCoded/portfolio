@@ -8,7 +8,7 @@
 .container {
   height: 100%;
   display: flex;
-  padding: 0 13rem;
+  padding: 0 13rem 0 6rem;
 }
 
 @media (max-width: 1070px) {
@@ -24,6 +24,12 @@
 
   & > button:first-child {
     z-index: 100;
+  }
+}
+
+@media (min-width: 701px) {
+  .buttonColumn {
+    height: 50rem;
   }
 }
 
@@ -48,15 +54,21 @@
   position: relative;
 
   p {
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: rgb(21, 32, 99);
     margin-bottom: 1rem;
   }
 
   h4 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--pink);
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .contentBox {
+    height: 60rem;
   }
 }
 
@@ -68,13 +80,13 @@
 
 @media (max-width: 700px) {
   .contentBox {
-    height: 66rem;
+    height: 73rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 530px) {
   .contentBox {
-    height: 72rem;
+    height: 80rem;
   }
 }
 
@@ -84,15 +96,15 @@
   }
 }
 
-@media (max-width: 384px) {
+@media (max-width: 430px) {
   .contentBox {
-    height: 77rem;
+    height: 86rem;
   }
 }
 
-@media (max-width: 332px) {
+@media (max-width: 370px) {
   .contentBox {
-    height: 81rem;
+    height: 96rem;
   }
 }
 
