@@ -66,7 +66,9 @@ class Layout extends Component {
               </li>
               <ListLink to="/contact/">contact</ListLink>
             </ul>
-            <Hamburger toggleNav={this.toggleNav.bind(this)} />
+            <div className={styles.HamburgerWrapper}>
+              <Hamburger toggleNav={this.toggleNav.bind(this)} />
+            </div>
           </nav>
           {this.props.children}
           <footer>

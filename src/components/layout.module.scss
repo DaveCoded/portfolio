@@ -60,6 +60,14 @@
   }
 }
 
+@media (max-width: 610px) {
+  .layout {
+    nav {
+      height: 7rem;
+    }
+  }
+}
+
 .homeLink {
   color: var(--dark-grey);
   display: inline-table;
@@ -106,4 +114,10 @@
   display: flex;
   margin-top: 0.7rem;
   margin-left: 3rem;
+}
+
+.HamburgerWrapper {
+  height: 100%;
+  display: flex;
+  padding-left: 2rem;
 }
