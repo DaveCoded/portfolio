@@ -48,6 +48,7 @@ module.exports = {
         id: "20537975",
       },
     },
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
