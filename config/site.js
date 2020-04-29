@@ -4,8 +4,8 @@ module.exports = {
   titleAlt: "Portfolio and Blog", // Title for JSONLD
   description:
     "The online portfolio and blog of London-based web developer, Dave Bernhard",
-  url: "https://dave-bernhard.netlify.com", // Site domain without trailing slash
-  siteUrl: "https://dave-bernhard.netlify.com", // url + pathPrefix
+  url: "https://davebernhard.com", // Site domain without trailing slash
+  siteUrl: "https://davebernhard.com", // url + pathPrefix
   siteLanguage: "en", // Language Tag on <html> element
   logo: "static/android-chrome-512x512.png",
   banner: "static/android-chrome-512x512.png",
